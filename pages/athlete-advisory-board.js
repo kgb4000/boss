@@ -1,13 +1,20 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react'
 import styled from 'styled-components'
-import PageHero from '../components/PageHeroSection'
+import HeroSection from '../components/HeroSection'
 import Button from '../components/Button'
 
 const AthleteBoard = () => {
   return (
     <>
-      <PageHero heading="Athlete Advisory Board" />
+      <HeroSection
+        backgroundImage="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80"
+        backgroundHeight="70vh"
+        heroText="Athlete Advisory Board"
+        subText="Donate and help us empower our young boys."
+        buttonText="Donate and Help us Today!"
+        buttonLink="https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=K72MD3PXYF8HA"
+      />
       <section>
         <div className="container">
           <h2>Athlete Advisory Board Members</h2>
