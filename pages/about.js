@@ -1,10 +1,11 @@
 import Link from 'next/link'
+import styled from 'styled-components'
 import HeroSection from '../components/HeroSection'
 import Button from '../components/Button'
 
 const About = () => {
   return (
-    <div>
+    <AboutPage>
       <HeroSection
         backgroundImage="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80"
         backgroundHeight="70vh"
@@ -63,8 +64,86 @@ const About = () => {
           </p>
         </div>
       </section>
-    </div>
+      <section>
+        <div className="container">
+          <h2>It Takes a Team</h2>
+          <div className="team-section">
+            <div className="teams">
+              <h3>BOSS Leadership Team</h3>
+              <p>
+                The perfect team — our principals and advisors have over 100
+                years of combined experience in sports and related industries.
+              </p>
+              <div className="btn">
+                <Link href="/team" passHref>
+                  <a>
+                    <Button>Learn more</Button>
+                  </a>
+                </Link>
+              </div>
+            </div>
+            <div className="teams">
+              <h3>Board of Directors</h3>
+              <p>
+                We support the foundation and logistical needs of BOSS so kids
+                can truly benefit from our program.
+              </p>
+              <div className="btn">
+                <a href="">
+                  <Button>Learn more</Button>
+                </a>
+              </div>
+            </div>
+            <div className="teams">
+              <h3>Athlete Advisory Board</h3>
+              <p>
+                We help get our kids from the little league to the big league.
+                Our network and input helps makes a difference.
+              </p>
+              <div className="btn">
+                <a href="">
+                  <Button>Learn more</Button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div className="container">
+          <h2>What We Do</h2>
+          <p>
+            We’ve delivered programming for 5 years, including the past 3 years
+            when we’ve delivered year-round programming including academic
+            coaching, mentoring and exposure to real world experiences and
+            opportunities for advocacy and service.
+          </p>
+        </div>
+      </section>
+    </AboutPage>
   )
 }
 
 export default About
+
+const AboutPage = styled.div`
+  .team-section {
+    @media (min-width: 1024px) {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    h3 {
+      font-size: 2rem;
+    }
+  }
+
+  .teams {
+    border: 1px solid #ddd;
+    padding: 2.5rem 2rem;
+    margin: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    align-self: stretch;
+  }
+`

@@ -44,9 +44,8 @@ const Hero = styled('span')`
     ),
     url(${(props) => props.backgroundImage});
   background-position: center;
-  height: ${(props) => props.backgroundHeight};
+  min-height: ${(props) => props.backgroundHeight};
   background-size: cover;
-  margin: 0 auto;
   margin-top: -100px;
   max-width: 100vw;
 

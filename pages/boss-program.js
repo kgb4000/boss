@@ -1,4 +1,5 @@
 import React from 'react'
+import styled from 'styled-components'
 import Link from 'next/link'
 import HeroSection from '../components/HeroSection'
 import Button from '../components/Button'
@@ -9,11 +10,74 @@ const BossProgram = () => {
       <HeroSection
         backgroundImage="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80"
         backgroundHeight="70vh"
-        heroText="About Boss Programs"
+        heroText="About BOSS"
         subText="We empower our young boys to soar to new heights."
         buttonText="Donate and Help us Today!"
         buttonLink="https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=K72MD3PXYF8HA"
       />
+      <section>
+        <div className="container">
+          <h2>The Six Pillars of BOSS</h2>
+          <p>
+            The Mastery Of The Six BOSS™ Pillars Is Critical And Essential For
+            The Committed-To-Excellence “Process” We Call BOSS™, To Develop The
+            Unwavering Disciple, Focus And Passion Needed To Build Sustained
+            Momentum To Evolve, Grow And Develop - Change - To Move From Poor To
+            Fair, From Fair To Good, And From Good To Great.
+          </p>
+          <Pillars>
+            <div className="pillar">
+              <h3>Mental BOSS</h3>
+              <p>
+                Being Mentally BOSS™ Means Being Open-Minded, Book Smart, And
+                Scholastically Strong.
+              </p>
+            </div>
+            <div className="pillar">
+              <h3>Emotionally BOSS</h3>
+              <p>
+                Emotional Security & Generosity Is At The Heart Of Being
+                Emotionally BOSS™.
+              </p>
+            </div>
+            <div className="pillar">
+              <h3>Socially BOSS</h3>
+              <p>
+                Those Who Are Socially BOSS™ Are Outgoing, Stylish, And Showcase
+                Excellent Behavior.
+              </p>
+            </div>
+            <div className="pillar">
+              <h3>Physically BOSS</h3>
+              <p>
+                Being Physically BOSS™ Means Exuding Strength, Striving To
+                Outperform, And Displaying Never-Ending Stamina.
+              </p>
+            </div>
+            <div className="pillar">
+              <h3>Economically BOSS</h3>
+              <p>
+                Those Who Are Economically BOSS™ Budget Like A Boss, Save Like A
+                Boss, & Own Like A Boss.
+              </p>
+            </div>
+            <div className="pillar">
+              <h3>Spiritually BOSS</h3>
+              <p>
+                Spiritually BOSS™ People Live Based On Sincerity, Belief, And
+                Submission To Their Creator.
+              </p>
+            </div>
+          </Pillars>
+          <div className="btn">
+            <Link href="/boss-application">
+              <a>
+                <Button>Apply To BOSS Today!</Button>
+              </a>
+            </Link>
+          </div>
+        </div>
+      </section>
       <section>
         <div className="container">
           <h2>About Boss Programs</h2>
@@ -158,3 +222,25 @@ const BossProgram = () => {
 }
 
 export default BossProgram
+
+const Pillars = styled.div`
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+
+  .pillar {
+    border: 1px solid #ddd;
+    padding: 2.5rem 2rem;
+    margin: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    align-self: stretch;
+
+    h3 {
+      font-size: 1.4rem;
+    }
+  }
+  @media and screen (min-width: 768px) {
+  }
+`

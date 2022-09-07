@@ -7,7 +7,7 @@ const Navbar = ({ toggle }) => {
     <Nav>
       <div className="logo">
         <Link href="/" passHref>
-          <a>Boss Programs</a>
+          <a>BOSS</a>
         </Link>
       </div>
       <MobileIcon onClick={toggle}>
@@ -78,8 +78,9 @@ const Nav = styled.header`
   align-self: center;
   max-width: 90%;
   margin: 0 auto;
-  height: 80px;
-  line-height: 80px;
+  height: 100px;
+  line-height: 100px;
+  z-idex: 1000;
 
   .logo {
     font-weight: bold;
