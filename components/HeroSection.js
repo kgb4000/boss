@@ -39,8 +39,8 @@ const Hero = styled('span')`
   align-items: center;
   background-image: linear-gradient(
       to bottom,
-      rgba(0, 0, 0, 0.42),
-      rgba(162, 155, 254, 0.35)
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.2)
     ),
     url(${(props) => props.backgroundImage});
   background-position: center;

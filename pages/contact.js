@@ -6,10 +6,10 @@ const contact = () => {
   return (
     <ContactUs>
       <HeroSection
-        backgroundImage="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80"
+        backgroundImage="images/headers/contact-us-cover-img.jpg"
         backgroundHeight="70vh"
-        heroText="Contact Boss Programs"
-        subText="Leveraging the power of sports to empower our young boys to soar."
+        heroText="Contact BOSS"
+        subText="Contact us to see how you can help."
       />
       <section>
         <div className="container">

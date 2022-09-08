@@ -11,8 +11,8 @@ const Stem = () => {
         backgroundImage="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80"
         backgroundHeight="70vh"
         heroText="S T E M"
-        subText="Science |Technoligy |  Enginerring | Mathematics"
-        buttonText="Apply to STEM today!"
+        subText="Science | Technology | Enginerring | Mathematics"
+        buttonText="register for STEM today!"
         buttonLink="/register"
       />
 

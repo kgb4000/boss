@@ -6,10 +6,10 @@ const Donate = () => {
   return (
     <>
       <HeroSection
-        backgroundImage="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80"
+        backgroundImage="images/headers/donate-to-boss.jpg"
         backgroundHeight="70vh"
         heroText="Donate"
-        subText="Donate and help us empower our young boys."
+        subText="Donate and help BOSS empower our young boys."
         buttonText="Donate and Help us Today!"
         buttonLink="https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=K72MD3PXYF8HA"
       />

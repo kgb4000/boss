@@ -11,29 +11,34 @@ const Home = () => {
   return (
     <Index>
       <HeroSection
-        backgroundImage="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80"
+        backgroundImage="images/headers/boss-cover-img.jpg"
         backgroundHeight="100vh"
-        heroText="BOSS"
-        subText="Leveraging the power of sports to empower our young boys to soar."
+        heroText="Business of Student Success"
+        subText="We leverage the power of sports to empower our young boys to soar."
         buttonText="Donate and Help us Today!"
         buttonLink="https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=K72MD3PXYF8HA"
       />
       <section>
         <div className="container">
-          <h2>Boss Program</h2>
-          <p>
-            Through BOSS™ (Business Of Student Success), We’re Equipping Boys,
-            Especially Boys Of Color, With The Tools To Succeed In School, In
-            The Community And Professionally, With An Emphasis On STEAM,
-            Critical Thinking/Writing And Related Fields. We Also Leverage The
-            Power Of Sport To Inspire Boys To Pursue Greatness
-          </p>
-          <div className="btn">
-            <Link href="/boss-application" passHref>
-              <a>
-                <Button>Apply Today!</Button>
-              </a>
-            </Link>
+          <div className="intro">
+            <div className="text">
+              <h2>Boss Program</h2>
+              <p>
+                Through BOSS™ (Business Of Student Success), We’re Equipping
+                Boys, Especially Boys Of Color, With The Tools To Succeed In
+                School, In The Community And Professionally, With An Emphasis On
+                STEAM, Critical Thinking/Writing And Related Fields. We Also
+                Leverage The Power Of Sport To Inspire Boys To Pursue Greatness
+              </p>
+              <div className="button">
+                <Link href="/boss-application" passHref>
+                  <a>
+                    <Button>Apply Today!</Button>
+                  </a>
+                </Link>
+              </div>
+            </div>
+            <img src="images/spacex-trip.jpg" />
           </div>
         </div>
       </section>
@@ -206,6 +211,21 @@ const Index = styled.div`
 
     .name {
       margin: 1rem 0;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .intro {
+      display: flex;
+      align-items: center;
+
+      .text {
+        margin-right: 4rem;
+      }
+
+      img {
+        max-width: 24rem;
+      }
     }
   }
 `

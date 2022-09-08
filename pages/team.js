@@ -220,7 +220,7 @@ const Team = () => {
             </div>
             <p className="center">
               Also see our{' '}
-              <Link href="/board" passHref>
+              <Link href="/board-of-directors" passHref>
                 <a>Board of Directors</a>
               </Link>{' '}
               and our{' '}
