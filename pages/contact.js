@@ -53,12 +53,12 @@ const ContactUs = styled.div`
   input {
     min-height: 40px;
     line-height: 40px;
-    max-height: 130px;
     width: 100%;
     border: 1px solid #ddd;
     border-radius: 0px 0px 0px 0px;
     margin: 0px 0px 30px 0px;
-    padding: 5px 10px 5px 10px;
+    padding: 1rem;
+    font: inherit;
   }
 
   textarea {
@@ -67,6 +67,7 @@ const ContactUs = styled.div`
     border: 1px solid #ddd;
     border-radius: 0px 0px 0px 0px;
     padding: 1rem;
+    font: inherit;
   }
 `
 

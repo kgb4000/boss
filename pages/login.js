@@ -46,11 +46,11 @@ const LoginPage = () => {
 
   return (
     <>
-      <HeroSection
+      {/* <HeroSection
         backgroundImage="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80"
         backgroundHeight="70vh"
         heroText="Log in to STEM"
-      />
+      /> */}
       <Login className=" login container">
         <div>
           <h1>Log in</h1>
@@ -117,13 +117,13 @@ const Login = styled.div`
   justify-content: center;
   align-self: center;
   align-items: center;
-  height: 100vh;
+  height: 80vh;
   form {
     max-width: 500px;
   }
   input {
     width: 100%;
-    height: 70px;
+    height: 40px;
     margin-bottom: 0.5rem;
     padding: 1rem;
     font-size: inherit;

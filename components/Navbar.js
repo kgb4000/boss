@@ -43,7 +43,7 @@ const Navbar = ({ toggle }) => {
           </li>
           <li>
             <Link href="/contact" passHref>
-              <a>Contact us</a>
+              <a>Contact</a>
             </Link>
           </li>
         </ul>
@@ -76,15 +76,17 @@ const Nav = styled.header`
   justify-content: space-between;
   align-items: center;
   align-self: center;
-  max-width: 90%;
+  max-width: 100%;
   margin: 0 auto;
   height: 100px;
   line-height: 100px;
   z-idex: 1000;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 00 1.2rem;
 
   .logo {
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 2rem;
 
     a {
       color: #fff;

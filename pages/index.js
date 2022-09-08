@@ -1,12 +1,15 @@
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable @next/next/no-img-element */
 import Link from 'next/link'
 import HeroSection from '../components/HeroSection'
 import Button from '../components/Button'
 
 import React from 'react'
+import styled from 'styled-components'
 
 const Home = () => {
   return (
-    <>
+    <Index>
       <HeroSection
         backgroundImage="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80"
         backgroundHeight="100vh"
@@ -106,6 +109,53 @@ const Home = () => {
       </section>
       <section>
         <div className="container">
+          <h2>Our Team</h2>
+          <div className="team">
+            <div className="team-members">
+              <img src="images/team/everett-glenn.jpg" />
+              <h3 className="name">Everett Glenn</h3>
+            </div>
+            <div className="team-members">
+              <img src="images/team/justin-glenn.jpg" />
+              <h3 className="name">Justin Glenn</h3>
+            </div>
+            <div className="team-members">
+              <img src="images/team/kofi-lomotey.jpg" />
+              <h3 className="name">Kofi Lomotey</h3>
+            </div>
+            <div className="team-members">
+              <img src="images/team/skyles-runser.jpg" />
+              <h3 className="name">Skyles Runser​</h3>
+            </div>
+          </div>
+          <div className="btn">
+            <Link href="/team" passHref>
+              <a>
+                <Button>Learn more about our Team</Button>
+              </a>
+            </Link>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div className="container">
+          <div className="board-members">
+            <div className="board-member">
+              <img src="" />
+              <h3 className="name"></h3>
+            </div>
+          </div>
+          <div className="btn">
+            <Link href="/board-of-directors" passHref>
+              <a>
+                <Button>Learn more about our Board</Button>
+              </a>
+            </Link>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div className="container">
           <h2>Do Your Part & Impact The Youth</h2>
           <p>
             They say the future is written by the young. They’re the ones who
@@ -137,8 +187,25 @@ const Home = () => {
           </div>
         </div>
       </section>
-    </>
+    </Index>
   )
 }
 
 export default Home
+
+const Index = styled.div`
+  .team {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-between;
+
+    img {
+      height: 300px;
+      border: 5px solid #ddd;
+    }
+
+    .name {
+      margin: 1rem 0;
+    }
+  }
+`

@@ -8,8 +8,9 @@ const Footer = () => {
     <>
       <FooterGuts>
         <div className="flex">
+          <img src="images/ESP-logo.jpg" className="logo" />
           <Address>
-            <h3>Boss Programs</h3>
+            <h3>BOSS</h3>
             <p>ESP Education & Leadership Institute</p>
             <p>info@bossprograms.org</p>
             <a href="tel:562619-8460">(562) 619-8460</a>
@@ -49,20 +50,31 @@ const Footer = () => {
         </div>
       </FooterGuts>
       <LowerFooter>
-        <p>Boss Programs &copy; {new Date().getFullYear()}</p>
-        <p>ESP Education & Leadership Institute.</p>
-        <p>All rights reserved.</p>
+        <p>BOSS &copy; {new Date().getFullYear()}. All rights reserved.</p>
+        {/* <p>ESP Education & Leadership Institute.</p> */}
+        <p></p>
       </LowerFooter>
     </>
   )
 }
 
 const FooterGuts = styled.footer`
-  font-size: 1rem;
+  .logo {
+    max-width: 200px;
+    margin-bottom: 4rem;
+  }
+  font-size: 1.2rem;
   border-top: 1px solid #ddd;
   padding: 5rem 1.2rem;
   margin: 0 auto;
   margin-top: 2rem;
+  background-color: #2c3e50;
+  color: #fff;
+
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
 
   @media (min-width: 970px) {
     .flex {
@@ -79,7 +91,7 @@ const FooterGuts = styled.footer`
       display: grid;
       max-width: 90%;
       margin: 0 auto;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(5, 1fr);
       justify-content: space-between;
     }
   }
@@ -88,12 +100,11 @@ const FooterGuts = styled.footer`
 const LowerFooter = styled.div`
   font-size: 1rem;
   background-color: #ecf0f1;
-  margin-top: 3rem;
-  padding: 3rem 0;
+  padding: 2rem 0;
   text-align: center;
 
   p {
-    margin-bottom: 1rem;
+    margin-bottom: 0;
   }
 `
 
@@ -101,10 +112,12 @@ const FooterButton = styled(Button)`
   margin: 0;
 `
 
-const Address = styled.div``
+const Address = styled.div`
+  margin-bottom: 4rem;
+`
 
 const Contact = styled.div`
-  margin-top: 2rem;
+  margin-bottom: 4rem;
 
   input {
     display: block;
@@ -128,7 +141,7 @@ const Contact = styled.div`
 `
 
 const Menu = styled.nav`
-margin-top: 2rem;
+margin-bottom: 4rem;
   ul {
     margin-top: 2rem;
     padding: 0;

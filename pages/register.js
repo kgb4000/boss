@@ -75,95 +75,97 @@ const RegisterPage = () => {
 
   return (
     <>
-      <HeroSection
+      {/* <HeroSection
         backgroundImage="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80"
         backgroundHeight="70vh"
         heroText="Register for S.T.E.M"
         subText="We empower our young boys to soar to new heights."
-      />
+      /> */}
       <Login>
         <div>
-          <h1>Register</h1>
-          <form onSubmit={handleOnSubmit}>
-            <input
-              id="name"
-              type="text"
-              value={inputs.name}
-              onChange={handleOnChange}
-              placeholder="Name"
-            />
-            <input
-              id="email"
-              type="email"
-              value={inputs.email}
-              onChange={handleOnChange}
-              placeholder="Email"
-            />
-            <input
-              id="grade"
-              type="text"
-              value={inputs.grade}
-              onChange={handleOnChange}
-              placeholder="Grade"
-            />
-            <input
-              id="highestLevelOfScience"
-              type="text"
-              value={inputs.highestLevelOfScience}
-              onChange={handleOnChange}
-              placeholder="Highest Level Of Science"
-            />
-            <input
-              id="highSchool"
-              type="text"
-              value={inputs.highSchool}
-              onChange={handleOnChange}
-              placeholder="High School"
-            />
-            <input
-              id="highSchool-city"
-              type="text"
-              value={inputs.highSchoolCity}
-              onChange={handleOnChange}
-              placeholder="High School City"
-            />
-            <input
-              id="highSchool-state"
-              type="text"
-              value={inputs.highSchoolState}
-              onChange={handleOnChange}
-              placeholder="High School State"
-            />
-            <textarea
-              id="carrerGoals"
-              value={inputs.carrerGoals}
-              onChange={handleOnChange}
-              placeholder="Carrer Goals"
-            ></textarea>
-            <SubmitButton
-              type="submit"
-              disabled={status.submitting || isEnabled}
-            >
-              {!status.submitting
-                ? !status.submitted
-                  ? 'Register!'
-                  : 'Done!'
-                : 'Submitting...'}
-            </SubmitButton>
-            {status.info.error && (
-              <div className="error">Error: {status.info.msg}</div>
-            )}
-            {!status.info.error && status.info.msg && (
-              <div className="success">We Got Your Info!</div>
-            )}
-          </form>
-          <p>
-            Already registered? Log in{' '}
-            <Link href="/login">
-              <a>here</a>
-            </Link>{' '}
-            .
-          </p>
+          <div className="container">
+            <h1>Register for STEM</h1>
+            <form onSubmit={handleOnSubmit}>
+              <input
+                id="name"
+                type="text"
+                value={inputs.name}
+                onChange={handleOnChange}
+                placeholder="Name"
+              />
+              <input
+                id="email"
+                type="email"
+                value={inputs.email}
+                onChange={handleOnChange}
+                placeholder="Email"
+              />
+              <input
+                id="grade"
+                type="text"
+                value={inputs.grade}
+                onChange={handleOnChange}
+                placeholder="Grade"
+              />
+              <input
+                id="highestLevelOfScience"
+                type="text"
+                value={inputs.highestLevelOfScience}
+                onChange={handleOnChange}
+                placeholder="Highest Level Of Science"
+              />
+              <input
+                id="highSchool"
+                type="text"
+                value={inputs.highSchool}
+                onChange={handleOnChange}
+                placeholder="High School"
+              />
+              <input
+                id="highSchool-city"
+                type="text"
+                value={inputs.highSchoolCity}
+                onChange={handleOnChange}
+                placeholder="High School City"
+              />
+              <input
+                id="highSchool-state"
+                type="text"
+                value={inputs.highSchoolState}
+                onChange={handleOnChange}
+                placeholder="High School State"
+              />
+              <textarea
+                id="carrerGoals"
+                value={inputs.carrerGoals}
+                onChange={handleOnChange}
+                placeholder="Carrer Goals"
+              ></textarea>
+              <SubmitButton
+                type="submit"
+                disabled={status.submitting || isEnabled}
+              >
+                {!status.submitting
+                  ? !status.submitted
+                    ? 'Register!'
+                    : 'Done!'
+                  : 'Submitting...'}
+              </SubmitButton>
+              {status.info.error && (
+                <div className="error">Error: {status.info.msg}</div>
+              )}
+              {!status.info.error && status.info.msg && (
+                <div className="success">We Got Your Info!</div>
+              )}
+            </form>
+            <p>
+              Already registered? Log in{' '}
+              <Link href="/login">
+                <a>here</a>
+              </Link>{' '}
+              .
+            </p>
+          </div>
         </div>
       </Login>
     </>
@@ -171,6 +173,7 @@ const RegisterPage = () => {
 }
 
 const Login = styled.div`
+  margin-top: 4rem;
   h1 {
     margin-bottom: 1rem;
   }
@@ -178,20 +181,19 @@ const Login = styled.div`
   justify-content: center;
   align-self: center;
   align-items: center;
-  height: 100vh;
   form {
     max-width: 500px;
   }
   input {
     width: 100%;
-    height: 50px;
+    height: 40px;
     margin-bottom: 0.5rem;
     padding: 1rem;
     font-size: inherit;
   }
 
   textarea {
-    height: 200px;
+    height: 150px;
     padding: 1rem;
     font-size: inherit;
     width: 100%;

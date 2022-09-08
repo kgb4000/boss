@@ -18,6 +18,11 @@ body {
   }
 }
 
+img {
+  max-width: 100%;
+  margin-bottom: 1rem;
+}
+
 .container {
   max-width: 1140px;
   padding: 0 1.2rem;
@@ -26,7 +31,7 @@ body {
 
 h2 {
   font-size: 2.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
 
 h3 {
@@ -45,10 +50,14 @@ li {
 }
 
 section {
-  padding-top: 3rem;
-  padding-bottom: 1rem;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
 }
 
 .btn {
+  text-align: center;
+}
+
+.center {
   text-align: center;
 }

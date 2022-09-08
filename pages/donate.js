@@ -54,10 +54,10 @@ const Donate = () => {
         <div className="container">
           <h2>Give Your Time</h2>
           <p>
-            Have you been an ESP volunteer this year? Many com­pa­nies offer
-            vol­un­teer grants to sup­port the non­profit orga­ni­za­tions with
+            Have you been an ESP volunteer this year? Many companies offer
+            volunteer grants to sup­port the non­profit orga­ni­za­tions with
             which their employ­ees are closely involved. Please con­sider
-            pur­su­ing this if it’s avail­able at your company.
+            pur­su­ing this if it’s available at your company.
           </p>
           <p>Become a volunteer today.</p>
         </div>
@@ -66,8 +66,8 @@ const Donate = () => {
         <div className="container">
           <h2>Become a Corporate or BOSS Funder</h2>
           <p>
-            If you would like to become a cor­po­rate or BOSS fun­der, please
-            con­tact Everett Glenn at (562) 619-8460 or eglenn@bossprograms.org
+            If you would like to become a corporate or BOSS funder, please
+            contact Everett Glenn at (562) 619-8460 or eglenn@bossprograms.org
             today.
           </p>
         </div>
