@@ -245,8 +245,8 @@ const TeamMembers = styled.div`
   }
   img {
     max-width: 200px;
+    margin: 0;
     margin-bottom: 1rem;
-    margin-right: 4rem;
     border-radius: 20px;
   }
 
@@ -264,6 +264,10 @@ const TeamMembers = styled.div`
     .team-member {
       display: flex;
       justify-content: space-between;
+
+      img {
+        margin-right: 4rem;
+      }
     }
   }
 `
