@@ -65,6 +65,7 @@ const Footer = () => {
 const FooterGuts = styled.footer`
   .logo {
     max-width: 200px;
+    margin: 0;
     margin-bottom: 4rem;
   }
   font-size: 1.2rem;
