@@ -39,7 +39,7 @@ const Home = () => {
               </div>
             </div>
             <img
-              src="images/headers/boss-index-cover-img.jpg"
+              src="/images/headers/boss-index-cover-img.jpg"
               className="shadow"
             />
             {/* <div className="button">

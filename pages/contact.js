@@ -6,7 +6,7 @@ const contact = () => {
   return (
     <ContactUs>
       <HeroSection
-        backgroundImage="images/headers/contact-us-cover-img.jpg"
+        backgroundImage="/images/headers/contact-us-cover-img.jpg"
         backgroundHeight="70vh"
         heroText="Contact BOSS"
         subText="Contact us to see how you can help."

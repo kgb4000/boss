@@ -7,7 +7,7 @@ const About = () => {
   return (
     <AboutPage>
       <HeroSection
-        backgroundImage="images/boss-classroom.jpg"
+        backgroundImage="/images/boss-classroom.jpg"
         backgroundHeight="70vh"
         heroText="About us"
         subText="Donate and help us empower our young boys."
