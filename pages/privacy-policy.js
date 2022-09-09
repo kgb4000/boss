@@ -141,7 +141,13 @@ const PrivacyPolicy = () => {
               for Browser Cookies. For more information on how You can delete
               Flash Cookies, please read “Where can I change the settings for
               disabling, or deleting local shared objects?” available at
-              https://helpx.adobe.com/flash-player/kb/disable-local-shared-objects-flash.html#main_Where_can_I_change_the_settings_for_disabling__or_deleting_local_shared_objects_
+              <a
+                href="https://helpx.adobe.com/flash-player/kb/disable-local-shared-objects-flash.html#main_Where_can_I_change_the_settings_for_disabling__or_deleting_local_shared_objects_"
+                target="_blank"
+                rel="noreferrer"
+              >
+                https://helpx.adobe.com/flash-player/kb/disable-local-shared-objects-flash.html#main_Where_can_I_change_the_settings_for_disabling__or_deleting_local_shared_objects_
+              </a>
             </li>
             <li>
               Web Beacons. Certain sections of our Service and our emails may
@@ -157,16 +163,15 @@ const PrivacyPolicy = () => {
             Cookies can be “Persistent” or “Session” Cookies. Persistent Cookies
             remain on Your personal computer or mobile device when You go
             offline, while Session Cookies are deleted as soon as You close Your
-            web browser. Learn more about cookies on the Privacy Policies
-            website article. We use both Session and Persistent Cookies for the
-            purposes set out below:
-          </p>
-          <p>
-            Cookies can be “Persistent” or “Session” Cookies. Persistent Cookies
-            remain on Your personal computer or mobile device when You go
-            offline, while Session Cookies are deleted as soon as You close Your
-            web browser. Learn more about cookies on the Privacy Policies
-            website article.
+            web browser. Learn more about cookies on the{' '}
+            <a
+              href="https://www.privacypolicies.com/blog/privacy-policy-template/#Use_Of_Cookies_Log_Files_And_Tracking"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Privacy Policies website
+            </a>{' '}
+            article.
           </p>
           <p>
             We use both Session and Persistent Cookies for the purposes set out
