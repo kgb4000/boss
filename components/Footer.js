@@ -8,7 +8,7 @@ const Footer = () => {
     <>
       <FooterGuts>
         <div className="flex">
-          <img src="images/ESP-logo.jpg" className="logo" />
+          <img src="images/boss-logo.jpg" className="logo" alt="BOSS Logo" />
           <Address>
             <h3>BOSS</h3>
             <p>ESP Education & Leadership Institute</p>
@@ -33,7 +33,11 @@ const Footer = () => {
               </li>
               <li>News & Events</li>
               <li>Donate</li>
-              <li>Privacy Policy</li>
+              <li>
+                <Link href="/privacy-policy" passHref>
+                  <a>Privacy Policy</a>
+                </Link>
+              </li>
             </ul>
           </Menu>
           <Contact>
@@ -93,6 +97,7 @@ const FooterGuts = styled.footer`
       margin: 0 auto;
       grid-template-columns: repeat(5, 1fr);
       justify-content: space-between;
+      padding: 6rem 0;
     }
   }
 `

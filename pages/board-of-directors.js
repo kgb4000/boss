@@ -19,7 +19,7 @@ const BoardOfDirectors = () => {
       />
       <section>
         <div className="container">
-          <h2>Board Members</h2>
+          <h2 className="title">Board Members</h2>
         </div>
         <div className="container">
           <BoardMembers>

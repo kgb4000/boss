@@ -18,7 +18,7 @@ const Team = () => {
       />
       <section>
         <div className="container">
-          <h2>Team Members</h2>
+          <h2 className="title">Team Members</h2>
         </div>
 
         <div className="container">
