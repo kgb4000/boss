@@ -258,6 +258,7 @@ const AdvisoryBoardMembers = styled.div`
 
       img {
         max-width: 200px;
+        margin: 0;
         margin-right: 4rem;
       }
     }

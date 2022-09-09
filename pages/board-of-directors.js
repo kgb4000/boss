@@ -283,13 +283,18 @@ const BoardMembers = styled.div`
 
     img {
       max-width: 200px;
-      margin-right: 4rem;
+      margin: 0;
+      margin-bottom: 1rem;
       border-radius: 20px;
     }
 
     @media (min-width: 768px) {
       display: flex;
       justify-content: space-between;
+
+      img {
+        margin-right: 4rem;
+      }
     }
   }
 `
