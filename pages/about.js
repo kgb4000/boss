@@ -95,9 +95,11 @@ const About = () => {
                     kids can truly benefit from our program.
                   </p>
                   <div className="btn">
-                    <a href="">
-                      <Button>Learn more</Button>
-                    </a>
+                    <Link href="/board-of-directors" passHref>
+                      <a>
+                        <Button>Learn more</Button>
+                      </a>
+                    </Link>
                   </div>
                 </div>
                 <div className="teams">
@@ -107,9 +109,11 @@ const About = () => {
                     league. Our network and input helps makes a difference.
                   </p>
                   <div className="btn">
-                    <a href="">
-                      <Button>Learn more</Button>
-                    </a>
+                    <Link href="/athlete-advisory-board" passHref>
+                      <a>
+                        <Button>Learn more</Button>
+                      </a>
+                    </Link>
                   </div>
                 </div>
               </div>
