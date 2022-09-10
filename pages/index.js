@@ -1,275 +1,292 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
+import React from 'react'
 import Link from 'next/link'
 import HeroSection from '../components/HeroSection'
 import Button from '../components/Button'
+import Layout from '../components/Layout/Layout'
 
-import React from 'react'
 import styled from 'styled-components'
 
 const Home = () => {
   return (
-    <Index>
-      <HeroSection
-        backgroundImage="images/headers/boss-cover-img.jpg"
-        backgroundHeight="100vh"
-        heroText="Business of Student Success"
-        subText="We leverage the power of sports to empower our young boys to soar."
-        buttonText="Donate and Help us Today!"
-        buttonLink="https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=K72MD3PXYF8HA"
-      />
-      <section>
-        <div className="container">
-          <div className="intro">
-            <div className="text">
-              <h2>BOSS - Business of Student Success</h2>
-              <p>
-                Through BOSS™ (Business Of Student Success), We’re Equipping
-                Boys, Especially Boys Of Color, With The Tools To Succeed In
-                School, In The Community And Professionally, With An Emphasis On
-                STEAM, Critical Thinking/Writing And Related Fields. We Also
-                Leverage The Power Of Sport To Inspire Boys To Pursue Greatness
-              </p>
-              <div className="button">
-                <Link href="/boss-application" passHref>
-                  <a>
-                    <Button>Apply Today!</Button>
-                  </a>
-                </Link>
-              </div>
-            </div>
-            <img
-              src="/images/headers/boss-index-cover-img.jpg"
-              className="shadow"
-            />
-            {/* <div className="button">
+    <>
+      <Layout>
+        <Index>
+          <HeroSection
+            backgroundImage="images/headers/boss-cover-img.jpg"
+            backgroundHeight="100vh"
+            heroText="Business of Student Success"
+            subText="We leverage the power of sports to empower our young boys to soar."
+            buttonText="Donate and Help us Today!"
+            buttonLink="https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=K72MD3PXYF8HA"
+          />
+          <section>
+            <div className="container">
+              <div className="intro">
+                <div className="text">
+                  <h2>BOSS - Business of Student Success</h2>
+                  <p>
+                    Through BOSS™ (Business Of Student Success), We’re Equipping
+                    Boys, Especially Boys Of Color, With The Tools To Succeed In
+                    School, In The Community And Professionally, With An
+                    Emphasis On STEAM, Critical Thinking/Writing And Related
+                    Fields. We Also Leverage The Power Of Sport To Inspire Boys
+                    To Pursue Greatness
+                  </p>
+                  <div className="button">
+                    <Link href="/boss-application" passHref>
+                      <a>
+                        <Button>Apply Today!</Button>
+                      </a>
+                    </Link>
+                  </div>
+                </div>
+                <img
+                  src="images/headers/boss-index-cover-img.jpg"
+                  className="shadow"
+                />
+                {/* <div className="button">
               <Link href="/boss-application" passHref>
                 <a>
                   <Button>Apply Today!</Button>
                 </a>
               </Link>
             </div> */}
-          </div>
-        </div>
-      </section>
-      <section className="counsel-sec">
-        <div className="container">
-          <h2>What We Do</h2>
-          <div className="services">
-            <div className="service">
-              <h3>Prepare</h3>
+              </div>
+            </div>
+          </section>
+          <section className="counsel-sec">
+            <div className="large-container">
+              <h2>What We Do</h2>
+              <div className="services">
+                <div className="service">
+                  <h3>Prepare</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad
+                    qui maiores facilis nihil dicta voluptatem perspiciatis modi
+                    culpa, accusantium quisquam voluptas inventore id. Ipsa
+                    tempora excepturi corporis praesentium non enim.
+                  </p>
+                </div>
+                <div className="service">
+                  <h3>Support</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad
+                    qui maiores facilis nihil dicta voluptatem perspiciatis modi
+                    culpa, accusantium quisquam voluptas inventore id. Ipsa
+                    tempora excepturi corporis praesentium non enim.
+                  </p>
+                </div>
+                <div className="service">
+                  <h3>Leverage</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad
+                    qui maiores facilis nihil dicta voluptatem perspiciatis modi
+                    culpa, accusantium quisquam voluptas inventore id. Ipsa
+                    tempora excepturi corporis praesentium non enim.
+                  </p>
+                </div>
+              </div>
+              <div className="button">
+                <Link href="/boss-program" passHref>
+                  <a>
+                    <Button>Check out our program!</Button>
+                  </a>
+                </Link>
+              </div>
+            </div>
+          </section>
+          <section className="resources-sec">
+            <div className="large-container spacex">
+              <img src="images/spacex-trip.jpg" className="shadow" />
+              <div>
+                <h2>Resources Lead To Success</h2>
+                <p>
+                  Resources are what dictate how successful kids are likely to
+                  be in the future. Unfortunately, inner city boys and boys of
+                  color (Target Boys), lack the basic resources needed to reach
+                  the same success as more “advantaged” households.
+                </p>
+                <p>
+                  That’s why the BOSS™ program was created: to provide the
+                  exposure, opportunities, and resources so our Target Boys come
+                  from “advantaged households” and have an equal opportunity to
+                  achieve personal and professional success, including:
+                </p>
+                <ul>
+                  <li>
+                    Intensive 2-week camp including STEAM project work, Math
+                    Madness competition, critical reading/argumentative writing
+                    and career pathway field trips and activities
+                  </li>
+                  <li>
+                    Year-round and multi-year Academic Enrichment (STEAM focused
+                    with critical thinking/writing), financial literacy,
+                    leadership, life skills, noncognitive skills development
+                  </li>
+                  <li>
+                    Amazing real-world experiences aligned with Consulting,
+                    Engineering, Global Trade, Law, Media, Medicine, and
+                    Technology career paths
+                  </li>
+                  <li>
+                    Opportunities for advocacy and service to build on
+                    leadership and team building skills
+                  </li>
+                </ul>
+                <div className="btn">
+                  <Link href="/about" passHref>
+                    <a>
+                      <Button>Learn more about us</Button>
+                    </a>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section className="team-sec">
+            <div className="team-container">
+              <h2 className="center">Our Team</h2>
+              <div className="team">
+                <div className="team-members">
+                  <img src="images/team/everett-glenn.jpg" />
+                  <h3 className="name">Everett Glenn</h3>
+                </div>
+                <div className="team-members">
+                  <img src="images/team/justin-glenn.jpg" />
+                  <h3 className="name">Justin Glenn</h3>
+                </div>
+                <div className="team-members">
+                  <img src="images/team/kofi-lomotey.jpg" />
+                  <h3 className="name">Kofi Lomotey</h3>
+                </div>
+                <div className="team-members">
+                  <img src="images/team/skyles-runser.jpg" />
+                  <h3 className="name">Skyles Runser​</h3>
+                </div>
+              </div>
+              <div className="btn">
+                <Link href="/team" passHref>
+                  <a>
+                    <Button>Learn more about our Team</Button>
+                  </a>
+                </Link>
+              </div>
+            </div>
+          </section>
+          <section className="board-sec">
+            <div className="large-container">
+              <div className="dots-bg"></div>
+              <h2 className="center">Our Board Members</h2>
+              <div className="board">
+                <div className="board-members">
+                  <img src="images/board/everett-glenn.jpg" />
+                  <h3 className="name">Everett Glenn</h3>
+                </div>
+                <div className="board-members">
+                  <img src="images/board/f-david-coleman.jpg" />
+                  <h3 className="name">F. David Coleman</h3>
+                </div>
+                <div className="board-members">
+                  <img src="images/board/ryan-delaney.jpeg" />
+                  <h3 className="name">Ryan Delaney</h3>
+                </div>
+                <div className="board-members">
+                  <img src="images/board/ferrara-kate-m.jpeg" />
+                  <h3 className="name">Kate Ferrara</h3>
+                </div>
+                <div className="board-members">
+                  <img src="images/board/alfred-miller.jpg" />
+                  <h3 className="name">Alfred Miller</h3>
+                </div>
+                <div className="board-members">
+                  <img
+                    src="images/board/jason-greenlee.jpg"
+                    alt="Jason Greenlee"
+                  />
+                  <h3 className="name">Jason Greenlee</h3>
+                </div>
+                <div className="board-members">
+                  <img
+                    src="images/board/robert-gustavis.jpeg"
+                    alt="Robert Gustavis"
+                  />
+                  <h3 className="name">Robert Gustavis</h3>
+                </div>
+                <div className="board-members">
+                  <img
+                    src="images/board/ralph-jackson.jpg"
+                    alt="Ralph Jackson"
+                  />
+                  <h3 className="name">Ralph Jackson</h3>
+                </div>
+                <div className="board-members">
+                  <img src="images/board/kofi-lomotey.jpg" />
+                  <h3 className="name">Kofi Lomotey</h3>
+                </div>
+                <div className="board-members">
+                  <img src="images/board/dr-humphries.jpeg" />
+                  <h3 className="name">Dr. Frederick Humphries</h3>
+                </div>
+              </div>
+              <div className="btn">
+                <Link href="/board-of-directors" passHref>
+                  <a>
+                    <Button>Read more about our board members</Button>
+                  </a>
+                </Link>
+              </div>
+            </div>
+          </section>
+          <section className="donate-sec">
+            <div className="large-container donate">
+              <img src="images/tom-williams.jpg" className="shadow" />
+              <div>
+                <h2>Do Your Part & Impact The Youth</h2>
+                <p>
+                  They say the future is written by the young. They’re the ones
+                  who will make life changing decisions, facilitate major
+                  change, and lead the world into new heights — with the proper
+                  tools and opportunities. Unfortunately, too many boys of color
+                  and those from under-resourced schools still grapple with
+                  issues that prevent them from reaching their personal and
+                  collective potential.{' '}
+                </p>
+                <p>
+                  You can be the difference that helps change that for good!
+                  Invest in our boys and give them a fighting chance to lead the
+                  world tomorrow.
+                </p>
+                <div className="btn">
+                  <a
+                    href="https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=K72MD3PXYF8HA"
+                    target="blank"
+                    rel="noreferrer"
+                  >
+                    <Button>Donate and help us today!</Button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div className="container">
+              <h2>Latest News</h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad qui
-                maiores facilis nihil dicta voluptatem perspiciatis modi culpa,
-                accusantium quisquam voluptas inventore id. Ipsa tempora
-                excepturi corporis praesentium non enim.
+                Where Young Minds Are Empowered to Soar, To Sail, To Step
+                Forward Bravely Into The Unknown, Being Guided More By
+                Imagination Than Memory, And Ultimately To Reach Beyond Their
+                Fears And Failures
               </p>
+              <div className="btn">
+                <Button>Read More</Button>
+              </div>
             </div>
-            <div className="service">
-              <h3>Support</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad qui
-                maiores facilis nihil dicta voluptatem perspiciatis modi culpa,
-                accusantium quisquam voluptas inventore id. Ipsa tempora
-                excepturi corporis praesentium non enim.
-              </p>
-            </div>
-            <div className="service">
-              <h3>Leverage</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad qui
-                maiores facilis nihil dicta voluptatem perspiciatis modi culpa,
-                accusantium quisquam voluptas inventore id. Ipsa tempora
-                excepturi corporis praesentium non enim.
-              </p>
-            </div>
-          </div>
-          <div className="button">
-            <Link href="/boss-program" passHref>
-              <a>
-                <Button>Check out our program!</Button>
-              </a>
-            </Link>
-          </div>
-        </div>
-      </section>
-      <section className="resources-sec">
-        <div className="container spacex">
-          <img src="images/spacex-trip.jpg" className="shadow" />
-          <div>
-            <h2>Resources Lead To Success</h2>
-            <p>
-              Resources are what dictate how successful kids are likely to be in
-              the future. Unfortunately, inner city boys and boys of color
-              (Target Boys), lack the basic resources needed to reach the same
-              success as more “advantaged” households.
-            </p>
-            <p>
-              That’s why the BOSS™ program was created: to provide the exposure,
-              opportunities, and resources so our Target Boys come from
-              “advantaged households” and have an equal opportunity to achieve
-              personal and professional success, including:
-            </p>
-            <ul>
-              <li>
-                Intensive 2-week camp including STEAM project work, Math Madness
-                competition, critical reading/argumentative writing and career
-                pathway field trips and activities
-              </li>
-              <li>
-                Year-round and multi-year Academic Enrichment (STEAM focused
-                with critical thinking/writing), financial literacy, leadership,
-                life skills, noncognitive skills development
-              </li>
-              <li>
-                Amazing real-world experiences aligned with Consulting,
-                Engineering, Global Trade, Law, Media, Medicine, and Technology
-                career paths
-              </li>
-              <li>
-                Opportunities for advocacy and service to build on leadership
-                and team building skills
-              </li>
-            </ul>
-            <div className="btn">
-              <Button>Read More About Us!</Button>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="team-sec">
-        <div className="team-container">
-          <h2 className="center">Our Team</h2>
-          <div className="team">
-            <div className="team-members">
-              <img src="images/team/everett-glenn.jpg" />
-              <h3 className="name">Everett Glenn</h3>
-            </div>
-            <div className="team-members">
-              <img src="images/team/justin-glenn.jpg" />
-              <h3 className="name">Justin Glenn</h3>
-            </div>
-            <div className="team-members">
-              <img src="images/team/kofi-lomotey.jpg" />
-              <h3 className="name">Kofi Lomotey</h3>
-            </div>
-            <div className="team-members">
-              <img src="images/team/skyles-runser.jpg" />
-              <h3 className="name">Skyles Runser​</h3>
-            </div>
-          </div>
-          <div className="btn">
-            <Link href="/team" passHref>
-              <a>
-                <Button>Learn more about our Team</Button>
-              </a>
-            </Link>
-          </div>
-        </div>
-      </section>
-      <section className="board-sec">
-        <div className="container">
-          <div className="dots-bg"></div>
-          <h2 className="center">Our Board Members</h2>
-          <div className="board">
-            <div className="board-members">
-              <img src="images/board/everett-glenn.jpg" />
-              <h3 className="name">Everett Glenn</h3>
-            </div>
-            <div className="board-members">
-              <img src="images/board/f-david-coleman.jpg" />
-              <h3 className="name">F. David Coleman</h3>
-            </div>
-            <div className="board-members">
-              <img src="images/board/ryan-delaney.jpeg" />
-              <h3 className="name">Ryan Delaney</h3>
-            </div>
-            <div className="board-members">
-              <img src="images/board/ferrara-kate-m.jpeg" />
-              <h3 className="name">Kate Ferrara</h3>
-            </div>
-            <div className="board-members">
-              <img src="images/board/alfred-miller.jpg" />
-              <h3 className="name">Alfred Miller</h3>
-            </div>
-            <div className="board-members">
-              <img src="images/board/jason-greenlee.jpg" alt="Jason Greenlee" />
-              <h3 className="name">Jason Greenlee</h3>
-            </div>
-            <div className="board-members">
-              <img
-                src="images/board/robert-gustavis.jpeg"
-                alt="Robert Gustavis"
-              />
-              <h3 className="name">Robert Gustavis</h3>
-            </div>
-            <div className="board-members">
-              <img src="images/board/ralph-jackson.jpg" alt="Ralph Jackson" />
-              <h3 className="name">Ralph Jackson</h3>
-            </div>
-            <div className="board-members">
-              <img src="images/board/kofi-lomotey.jpg" />
-              <h3 className="name">Kofi Lomotey</h3>
-            </div>
-            <div className="board-members">
-              <img src="images/board/dr-humphries.jpeg" />
-              <h3 className="name">Dr. Frederick Humphries</h3>
-            </div>
-          </div>
-          <div className="btn">
-            <Link href="/board-of-directors" passHref>
-              <a>
-                <Button>Read more about our board members</Button>
-              </a>
-            </Link>
-          </div>
-        </div>
-      </section>
-      <section className="donate-sec">
-        <div className="container donate">
-          <img src="images/tom-williams.jpg" className="shadow" />
-          <div>
-            <h2>Do Your Part & Impact The Youth</h2>
-            <p>
-              They say the future is written by the young. They’re the ones who
-              will make life changing decisions, facilitate major change, and
-              lead the world into new heights — with the proper tools and
-              opportunities. Unfortunately, too many boys of color and those
-              from under-resourced schools still grapple with issues that
-              prevent them from reaching their personal and collective
-              potential.{' '}
-            </p>
-            <p>
-              You can be the difference that helps change that for good! Invest
-              in our boys and give them a fighting chance to lead the world
-              tomorrow.
-            </p>
-            <div className="btn">
-              <a
-                href="https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=K72MD3PXYF8HA"
-                target="blank"
-                rel="noreferrer"
-              >
-                <Button>Donate and help us today!</Button>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section>
-        <div className="container">
-          <h2>Latest News</h2>
-          <p>
-            Where Young Minds Are Empowered to Soar, To Sail, To Step Forward
-            Bravely Into The Unknown, Being Guided More By Imagination Than
-            Memory, And Ultimately To Reach Beyond Their Fears And Failures
-          </p>
-          <div className="btn">
-            <Button>Read More</Button>
-          </div>
-        </div>
-      </section>
-    </Index>
+          </section>
+        </Index>
+      </Layout>
+    </>
   )
 }
 
@@ -361,6 +378,8 @@ const Index = styled.div`
     background-repeat: no-repeat;
   } */
   }
+
+  /* Team */
   .team-members,
   .board-members {
     margin-bottom: 4rem;

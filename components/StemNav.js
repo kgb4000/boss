@@ -1,12 +1,14 @@
 import Link from 'next/link'
 import { useAuth } from './Context/AuthContext'
 import styled from 'styled-components'
-import { FaBars, FaCaretDown } from 'react-icons/fa'
+import { FaBars } from 'react-icons/fa'
 import { useRouter } from 'next/router'
-import Button from './Button'
-import { useState } from 'react'
 
-const Navbar = ({ toggle }) => {
+const toggle = () => {
+  setIsOpen(!isOpen)
+}
+
+const StemNav = ({ toggle }) => {
   const { user, logout } = useAuth()
   const router = useRouter()
   return (
@@ -22,25 +24,21 @@ const Navbar = ({ toggle }) => {
       <nav>
         <ul className="nav">
           <li>
-            <Link href="/about" passHref>
-              <a className="text">About us</a>
+            <Link href="/stem-portal" passHref>
+              <a>Why STEM</a>
             </Link>
           </li>
           <li>
-            <Link href="/boss-program" passHref>
-              <a className="text">Our Programs</a>
+            <Link href="/stem-portal" passHref>
+              <a>STEM</a>
             </Link>
           </li>
           <li>
-            <Link href="/news" passHref>
-              <a className="text">News & Events</a>
+            <Link href="/stem-portal" passHref>
+              <a>Colleges</a>
             </Link>
           </li>
-          <li>
-            <Link href="/donate" passHref>
-              <a className="text">Donate</a>
-            </Link>
-          </li>
+
           <li>
             {user ? (
               <div>
@@ -55,9 +53,7 @@ const Navbar = ({ toggle }) => {
               </div>
             ) : (
               <Link href="/login" passHref>
-                <a>
-                  <NavButton>STEM Login</NavButton>
-                </a>
+                <a>STEM Portal</a>
               </Link>
             )}
           </li>
@@ -67,29 +63,7 @@ const Navbar = ({ toggle }) => {
   )
 }
 
-export default Navbar
-
-const NavButton = styled(Button)`
-  font-size: 1rem;
-  font-weight: bold;
-  padding: 0.5rem;
-  border: none;
-  border-radius: 5px;
-  color: #fff;
-  cursor: pointer;
-  text-transform: uppercase;
-  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-  margin: 0;
-  a {
-    color: #fff;
-    text-decoration: none;
-
-    :hover {
-      border-bottom: none;
-      font-weight: bold;
-    }
-  }
-`
+export default StemNav
 
 const MobileIcon = styled.div`
   display: none;
@@ -149,7 +123,7 @@ const Nav = styled.header`
         margin: 0 1rem;
         line-height: 80px;
 
-        a.text {
+        a {
           color: #fff;
           text-decoration: none;
 

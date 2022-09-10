@@ -10,7 +10,8 @@ const Button = styled.button`
   color: #fff;
   cursor: pointer;
   text-transform: uppercase;
-  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  font-weight: bold;
+  ${'' /* box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; */}
 `
 
 export const BTN = styled.div`

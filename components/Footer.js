@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from 'react'
 import Link from 'next/link'
 import styled from 'styled-components'
@@ -36,6 +37,11 @@ const Footer = () => {
               <li>
                 <Link href="/privacy-policy" passHref>
                   <a>Privacy Policy</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" passHref>
+                  <a>Contact</a>
                 </Link>
               </li>
             </ul>

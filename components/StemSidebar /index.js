@@ -28,33 +28,18 @@ const Sibebar = ({ isOpen, toggle }) => {
         <SidebarWrapper>
           <SidebarMenu>
             <SidebarItem>
-              <SidebarLink href="/about">
-                <SidebarLinkA>About</SidebarLinkA>
+              <SidebarLink href="/stem-portal">
+                <SidebarLinkA>Why STEM</SidebarLinkA>
               </SidebarLink>
             </SidebarItem>
             <SidebarItem>
-              <SidebarLink href="/boss-program">
-                <SidebarLinkA>Boss Programs</SidebarLinkA>
-              </SidebarLink>
-            </SidebarItem>
-            <SidebarItem>
-              <SidebarLink href="/news">
-                <SidebarLinkA>News & Events</SidebarLinkA>
-              </SidebarLink>
-            </SidebarItem>
-            <SidebarItem>
-              <SidebarLink href="/stem">
+              <SidebarLink href="/stem-portal">
                 <SidebarLinkA>STEM</SidebarLinkA>
               </SidebarLink>
             </SidebarItem>
             <SidebarItem>
-              <SidebarLink href="/donate">
-                <SidebarLinkA>Donate</SidebarLinkA>
-              </SidebarLink>
-            </SidebarItem>
-            <SidebarItem>
-              <SidebarLink href="/contact">
-                <SidebarLinkA>Contact us</SidebarLinkA>
+              <SidebarLink href="/stem-portal">
+                <SidebarLinkA>Colleges</SidebarLinkA>
               </SidebarLink>
             </SidebarItem>
             <SidebarItem>

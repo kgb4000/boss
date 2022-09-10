@@ -26,6 +26,12 @@ img {
 }
 
 .container {
+  max-width: 1140px;
+  padding: 0 1.2rem;
+  margin: 0 auto;
+}
+
+.large-container {
   max-width: 1440px;
   padding: 0 1.2rem;
   margin: 0 auto;
@@ -41,10 +47,6 @@ img {
 h1 {
   font-size: 3.2rem;
   margin-bottom: 1rem;
-
-  @media (min-width: 1140px) {
-    font-size: 4.4rem;
-  }
 }
 
 h2 {
@@ -57,7 +59,7 @@ h2 {
 }
 
 h2.title {
-  margin-bottom: 6rem;
+  margin-bottom: 2rem;
   text-align: center;
 }
 

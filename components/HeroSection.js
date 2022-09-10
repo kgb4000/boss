@@ -85,8 +85,7 @@ const Hero = styled('span')`
 
 const WhiteButton = styled(Button)`
   border: #fff;
-  background-color: #2c3e50;
-  border: 1px solid #2c3e50;
+  background-color: #e41e2f;
   color: #fff;
   font-size: 0.8rem;
   padding: 1.2rem 1.4rem;

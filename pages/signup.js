@@ -1,20 +1,20 @@
 import { useState } from 'react'
-import { useRouter } from 'next/router'
 import { useAuth } from '../components/Context/AuthContext'
+import { useRouter } from 'next/router'
 
 import Link from 'next/link'
 import styled from 'styled-components'
 import Button from '../components/Button'
 import Layout from '../components/Layout/Layout'
 
-const LoginPage = () => {
+const SignupPage = () => {
+  const { user, signup } = useAuth()
   const router = useRouter()
-  const { user, login } = useAuth()
+
   const [inputs, setInputs] = useState({
     email: '',
     password: '',
   })
-  const [error, setError] = useState()
 
   const handleOnChange = (e) => {
     e.persist()
@@ -25,28 +25,26 @@ const LoginPage = () => {
     }))
   }
 
-  const isEnabled = inputs.email.length && inputs.name > 0
-
-  const handleLogIn = async (e) => {
+  const handleSignIn = async (e) => {
     e.preventDefault()
 
-    console.log(user)
+    console.log(inputs)
 
     try {
-      await login(inputs.email, inputs.password)
-      router.push('/stem-portal')
-    } catch (error) {
-      console.log(error)
+      await signup(inputs.email, inputs.password)
+      router.push('/')
+    } catch (err) {
+      console.log(err)
     }
   }
 
   return (
     <>
       <Layout>
-        <Login className=" login container">
+        <Signup className=" login container">
           <div>
-            <h1>Log in</h1>
-            <form onSubmit={handleLogIn}>
+            <h1>Sign up</h1>
+            <form onSubmit={handleSignIn}>
               <input
                 id="email"
                 type="email"
@@ -63,23 +61,23 @@ const LoginPage = () => {
                 onChange={handleOnChange}
                 placeholder="Password *"
               />
-              <SubmitButton disabled={isEnabled}>Log in!</SubmitButton>
+              <SubmitButton type="submit">Signup</SubmitButton>
             </form>
             <p>
               Not a STEM member? Register{' '}
               <Link href="/register">
                 <a>here</a>
-              </Link>
+              </Link>{' '}
               .
             </p>
           </div>
-        </Login>
+        </Signup>
       </Layout>
     </>
   )
 }
 
-const Login = styled.div`
+const Signup = styled.div`
   h1 {
     margin-bottom: 1rem;
   }
@@ -89,7 +87,7 @@ const Login = styled.div`
   align-items: center;
   height: 80vh;
   form {
-    max-width: 300px;
+    max-width: 500px;
   }
   input {
     width: 100%;
@@ -110,4 +108,4 @@ const SubmitButton = styled(Button)`
   margin-bottom: 1rem;
 `
 
-export default LoginPage
+export default SignupPage
