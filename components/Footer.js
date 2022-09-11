@@ -62,7 +62,9 @@ const Footer = () => {
       <LowerFooter>
         <p>BOSS &copy; {new Date().getFullYear()}. All rights reserved.</p>
         {/* <p>ESP Education & Leadership Institute.</p> */}
-        <p></p>
+        <p>
+          <small>Made by Kester from Bowie SEO</small>
+        </p>
       </LowerFooter>
     </>
   )

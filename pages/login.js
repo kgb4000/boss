@@ -35,8 +35,8 @@ const LoginPage = () => {
     try {
       await login(inputs.email, inputs.password)
       router.push('/stem-portal')
-    } catch (error) {
-      console.log(error)
+    } catch (err) {
+      console.error(err)
     }
   }
 
