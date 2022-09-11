@@ -14,7 +14,6 @@ const LoginPage = () => {
     email: '',
     password: '',
   })
-  const [error, setError] = useState()
 
   const handleOnChange = (e) => {
     e.persist()
@@ -30,7 +29,7 @@ const LoginPage = () => {
   const handleLogIn = async (e) => {
     e.preventDefault()
 
-    console.log(user)
+    // console.log(user)
 
     try {
       await login(inputs.email, inputs.password)
@@ -38,6 +37,7 @@ const LoginPage = () => {
     } catch (err) {
       console.error(err)
     }
+    then(() => console.log('Woops!!'))
   }
 
   return (
