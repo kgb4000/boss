@@ -3,6 +3,7 @@ import React from 'react'
 import Link from 'next/link'
 import styled from 'styled-components'
 import Button from '../components/Button'
+import AuthorBio from '../components/AuthorBio'
 
 const Footer = () => {
   return (
