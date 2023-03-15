@@ -4,18 +4,23 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@graphcms/rich-text-react-renderer": "^0.6.1",
     "esbuild": "^0.15.6",
     "firebase": "^9.9.3",
+    "graphql": "^16.6.0",
+    "graphql-request": "^5.0.0",
     "next": "12.2.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.4.0",
     "react-is": "^18.2.0",
+    "react-modal-video": "^1.2.8",
+    "react-share": "^4.4.1",
     "styled-components": "^5.3.5"
   },
   "devDependencies": {

@@ -1,169 +1,299 @@
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
-import React from 'react'
+import { React, useState } from 'react'
 import Link from 'next/link'
 import HeroSection from '../components/HeroSection'
 import Button from '../components/Button'
 import Layout from '../components/Layout/Layout'
+import ModalVideo from 'react-modal-video'
+import { getPosts } from '../lib/data'
 
 import styled from 'styled-components'
 
-const Home = () => {
+export const getStaticProps = async () => {
+  const data = await getPosts()
+
+  return {
+    props: {
+      data,
+    },
+  }
+}
+
+const donate = 'https://bossprograms.app.neoncrm.com/forms/donation-form'
+
+const Home = ({ data }) => {
+  const [isOpen, setOpen] = useState(false)
   return (
     <>
       <Layout>
         <Index>
           <HeroSection
-            backgroundImage="images/headers/boss-cover-img.jpg"
-            backgroundHeight="100vh"
+            backgroundImage="/images/headers/header-img.webp"
+            backgroundHeight="90vh"
             heroText="Business of Student Success"
-            subText="We leverage the power of sports to empower our young boys to soar."
+            subText="We position our BOSS Pillars and timeless success principles as the transformative engine in our boys’ lives to inspire, equip and empower them to soar"
             buttonText="Donate and Help us Today!"
-            buttonLink="https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=K72MD3PXYF8HA"
+            buttonLink={donate}
           />
           <section>
-            <div className="container">
-              <div className="intro">
-                <div className="text">
-                  <h2>BOSS - Business of Student Success</h2>
-                  <p>
-                    Through BOSS™ (Business Of Student Success), We’re Equipping
-                    Boys, Especially Boys Of Color, With The Tools To Succeed In
-                    School, In The Community And Professionally, With An
-                    Emphasis On STEAM, Critical Thinking/Writing And Related
-                    Fields. We Also Leverage The Power Of Sport To Inspire Boys
-                    To Pursue Greatness
-                  </p>
-                  <div className="button">
-                    <Link href="/boss-application" passHref>
-                      <a>
-                        <Button>Apply Today!</Button>
-                      </a>
-                    </Link>
-                  </div>
-                </div>
+            <div className="large-container">
+              <div className="grid">
                 <img
                   src="images/headers/boss-index-cover-img.jpg"
                   className="shadow"
+                  alt="Business of student success"
+                  loading="lazy"
                 />
-                {/* <div className="button">
-              <Link href="/boss-application" passHref>
-                <a>
+                <div className="text">
+                  <h2>BOSS - Business of Student Success</h2>
+                  <p>
+                    We equip BIPOC youth, especially economically disadvantaged
+                    and boys of color with the tools and skills to succeed in
+                    all aspects of their lives.
+                  </p>
+                  <p>
+                    BOSS™ (Business Of Student Success) instills a mindset
+                    within our boys that advances both individual excellence and
+                    team mastery. The BOSS values are embedded in all that we
+                    do, fostering our boys’ intellectual, physical, and
+                    emotional well-being.
+                  </p>
+                  <p>
+                    We leverage our BOSS Pillars and the power of timeless
+                    success principles to inspire the pursuit of greatness in
+                    schools, at home, and in the community. With an emphasis on
+                    STEAM learning and the essential sharpening of critical
+                    thinking skills, we challenge our boys to excel
+                    professionally as well-rounded scholars, so they are
+                    prepared and confident to shine in any career they choose.
+                  </p>
+                </div>
+              </div>
+              <div className="btn">
+                <a
+                  href="https://bossprograms.app.neoncrm.com/forms/student-application"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <Button>Apply Today!</Button>
                 </a>
-              </Link>
-            </div> */}
               </div>
             </div>
           </section>
           <section className="counsel-sec">
             <div className="large-container">
-              <h2>What We Do</h2>
+              <h2 className="title">What We Do</h2>
               <div className="services">
-                <div className="service">
-                  <h3>Prepare</h3>
+                <Service>
+                  <img
+                    src="/images/inspire-white.png"
+                    alt="Inspire our youth."
+                    loading="lazy"
+                  />
+                  <h3>Inspire</h3>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad
-                    qui maiores facilis nihil dicta voluptatem perspiciatis modi
-                    culpa, accusantium quisquam voluptas inventore id. Ipsa
-                    tempora excepturi corporis praesentium non enim.
+                    Our boys and young men have endless possibilities within
+                    them. BOSS inspires their passion, courage, and confidence
+                    to skillfully transcend any limitations placed by given
+                    realities or internal doubts. BOSS supports their interests,
+                    fuels their dreams, and celebrates their pursuit of
+                    greatness.
                   </p>
-                </div>
-                <div className="service">
-                  <h3>Support</h3>
+                </Service>
+                <Service>
+                  <img
+                    src="/images/equip-white.png"
+                    alt="Equip our youth to succeed."
+                    loading="lazy"
+                  />
+                  <h3>Equip</h3>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad
-                    qui maiores facilis nihil dicta voluptatem perspiciatis modi
-                    culpa, accusantium quisquam voluptas inventore id. Ipsa
-                    tempora excepturi corporis praesentium non enim.
+                    Life is very rarely a straight and even path. Through the
+                    BOSS program, our boys and young men develop the necessary
+                    skill sets, mindsets, and resources to navigate life’s most
+                    difficult twists and turns.
                   </p>
-                </div>
-                <div className="service">
-                  <h3>Leverage</h3>
+                </Service>
+                <Service>
+                  <img
+                    src="/images/empower-white.png"
+                    alt="Equip our youth to succeed."
+                    loading="lazy"
+                  />
+                  <h3>Empower</h3>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad
-                    qui maiores facilis nihil dicta voluptatem perspiciatis modi
-                    culpa, accusantium quisquam voluptas inventore id. Ipsa
-                    tempora excepturi corporis praesentium non enim.
+                    Empowering our boys to soar and step forward bravely into
+                    the unknown, being guided more by imagination than memory,
+                    and ultimately, to reach beyond their fears and failures in
+                    all areas.
                   </p>
-                </div>
+                </Service>
               </div>
-              <div className="button">
-                <Link href="/boss-program" passHref>
-                  <a>
-                    <Button>Check out our program!</Button>
-                  </a>
-                </Link>
+              <ModalVideo
+                channel="youtube"
+                autoplay
+                isOpen={isOpen}
+                videoId="/3_NsvY-MwLo"
+                onClose={() => setOpen(false)}
+              />
+              <div className="btn">
+                <Button onClick={() => setOpen(true)}>Watch This Video!</Button>
               </div>
             </div>
           </section>
-          <section className="resources-sec">
+          <section>
             <div className="large-container spacex">
-              <img src="images/spacex-trip.jpg" className="shadow" />
-              <div>
-                <h2>Resources Lead To Success</h2>
-                <p>
+              <div className="grid">
+                <h2 className="mobile-text">
                   Resources are what dictate how successful kids are likely to
-                  be in the future. Unfortunately, inner city boys and boys of
-                  color (Target Boys), lack the basic resources needed to reach
-                  the same success as more “advantaged” households.
-                </p>
-                <p>
-                  That’s why the BOSS™ program was created: to provide the
-                  exposure, opportunities, and resources so our Target Boys come
-                  from “advantaged households” and have an equal opportunity to
-                  achieve personal and professional success, including:
-                </p>
-                <ul>
-                  <li>
-                    Intensive 2-week camp including STEAM project work, Math
-                    Madness competition, critical reading/argumentative writing
-                    and career pathway field trips and activities
-                  </li>
-                  <li>
-                    Year-round and multi-year Academic Enrichment (STEAM focused
-                    with critical thinking/writing), financial literacy,
-                    leadership, life skills, noncognitive skills development
-                  </li>
-                  <li>
-                    Amazing real-world experiences aligned with Consulting,
-                    Engineering, Global Trade, Law, Media, Medicine, and
-                    Technology career paths
-                  </li>
-                  <li>
-                    Opportunities for advocacy and service to build on
-                    leadership and team building skills
-                  </li>
-                </ul>
-                <div className="btn">
-                  <Link href="/about" passHref>
-                    <a>
-                      <Button>Learn more about us</Button>
-                    </a>
-                  </Link>
+                  be in the future
+                </h2>
+                <img
+                  src="images/space-x-500.jpg"
+                  alt="Space X and Boss"
+                  loading="lazy"
+                />
+                <div>
+                  <h2 className="desktop-text">
+                    Resources are what dictate how successful kids are likely to
+                    be in the future
+                  </h2>
+                  <p>
+                    Unfortunately, target youth lack the basic resources needed
+                    to reach the same success as more “advantaged” households.We
+                    leverage our BOSS Pillars and the power of timeless success
+                    principles to inspire the pursuit of greatness in schools,
+                    at home, and in the community. With an emphasis on STEAM
+                    learning and the essential sharpening of critical thinking
+                    skills, we challenge our boys to excel professionally as
+                    well-rounded scholars, so they are prepared and confident to
+                    shine in any career they choose.
+                  </p>
+                  <p>BOSS includes:</p>
+                  <ul>
+                    <li>
+                      Annual summer camp including STEAM project work, Math
+                      Madness competition, critical reading/argumentative
+                      writing and career pathway field trips and activities.
+                    </li>
+                    <li>
+                      Year-round and multi-year academic enrichment and support.
+                    </li>
+                    <li>
+                      Real-world experiences aligned with Consulting,
+                      Engineering, Global Trade, Law, Media, Medicine, and
+                      Technology career pathways.
+                    </li>
+                    <li>
+                      Opportunities for advocacy and service to build on
+                      leadership and team building skills.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="btn">
+              <Link href="/about" passHref>
+                <a>
+                  <Button>Learn more about us</Button>
+                </a>
+              </Link>
+            </div>
+          </section>
+          <section>
+            <div className="large-container">
+              <div className="ParallaxVideo">
+                <video autoPlay muted loop id="myVideo">
+                  <source src="/video/boss-video.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div className="large-container">
+              <div className="grid">
+                <div>
+                  <h2>We’re Committed to Helping Our Kids</h2>
+                  <p>
+                    Target youth live in a society where they are too often
+                    confronted with the violence of poverty and the reality of
+                    systemic racism. BOSS preparation accounts for the increased
+                    challenges our boys and young men may face. We strive to
+                    infuse their lives with an abundance of resources to support
+                    them in navigating life’s obstacle courses with trust in
+                    themselves, belief in their abilities, and a self-awareness
+                    that is key to their decision-making.
+                  </p>
+                  <img className="pic" src="images/boss-learning.jpg" />
+                </div>
+                <div>
+                  <div className="box">
+                    <div className="box-text">
+                      <h3>4100</h3>
+                      <p>Kids Impacted</p>
+                    </div>
+                  </div>
+                  <div className="box">
+                    <div className="box-text">
+                      <h3>5</h3>
+                      <p>Year Academic Out-Performance</p>
+                    </div>
+                  </div>
+                  <div className="box">
+                    <div className="box-text">
+                      <h3>38</h3>
+                      <p>Events Completed</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </section>
-          <section className="team-sec">
-            <div className="team-container">
-              <h2 className="center">Our Team</h2>
+          <section>
+            <div className="large-container">
+              <h2 className="title">What Our BOSS Kids Are Saying</h2>
+              <div className="videoWrapper">
+                <iframe
+                  width="560"
+                  height="349"
+                  src="https://www.youtube.com/embed/Ad3ZlP-bdcA"
+                ></iframe>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div className="large-container team-section">
+              <h2 className="center title">Our Boss Leadership Team</h2>
               <div className="team">
                 <div className="team-members">
-                  <img src="images/team/everett-glenn.jpg" />
-                  <h3 className="name">Everett Glenn</h3>
+                  <img
+                    src="images/team/everett-glenn.jpg"
+                    alt="Everett Glenn"
+                    loading="lazy"
+                  />
                 </div>
                 <div className="team-members">
-                  <img src="images/team/justin-glenn.jpg" />
-                  <h3 className="name">Justin Glenn</h3>
+                  <img
+                    src="images/team/erika-thurmond.jpg"
+                    alt="Erika Thurmond"
+                    loading="lazy"
+                  />
                 </div>
                 <div className="team-members">
-                  <img src="images/team/kofi-lomotey.jpg" />
-                  <h3 className="name">Kofi Lomotey</h3>
+                  <img
+                    src="images/team/gwendolyn-bush.jpg"
+                    alt="Gwendolyn Bush"
+                    loading="lazy"
+                  />
                 </div>
                 <div className="team-members">
-                  <img src="images/team/skyles-runser.jpg" />
-                  <h3 className="name">Skyles Runser​</h3>
+                  <img
+                    src="images/team/dr-kagba-suaray.jpg"
+                    alt="Dr. Kagba Suaray"
+                    loading="lazy"
+                  />
                 </div>
               </div>
               <div className="btn">
@@ -178,56 +308,46 @@ const Home = () => {
           <section className="board-sec">
             <div className="large-container">
               <div className="dots-bg"></div>
-              <h2 className="center">Our Board Members</h2>
+              <h2 className="title">
+                Our Board is Composed of People Committed to Helping Kids in Our
+                Community
+              </h2>
               <div className="board">
                 <div className="board-members">
                   <img src="images/board/everett-glenn.jpg" />
-                  <h3 className="name">Everett Glenn</h3>
                 </div>
                 <div className="board-members">
                   <img src="images/board/f-david-coleman.jpg" />
-                  <h3 className="name">F. David Coleman</h3>
                 </div>
                 <div className="board-members">
-                  <img src="images/board/ryan-delaney.jpeg" />
-                  <h3 className="name">Ryan Delaney</h3>
+                  <img src="images/board/ryan-delaney-1.jpg" />
                 </div>
                 <div className="board-members">
-                  <img src="images/board/ferrara-kate-m.jpeg" />
-                  <h3 className="name">Kate Ferrara</h3>
+                  <img src="images/board/kate-ferrara.jpg" />
                 </div>
                 <div className="board-members">
                   <img src="images/board/alfred-miller.jpg" />
-                  <h3 className="name">Alfred Miller</h3>
                 </div>
                 <div className="board-members">
                   <img
                     src="images/board/jason-greenlee.jpg"
                     alt="Jason Greenlee"
                   />
-                  <h3 className="name">Jason Greenlee</h3>
                 </div>
                 <div className="board-members">
                   <img
                     src="images/board/robert-gustavis.jpeg"
                     alt="Robert Gustavis"
                   />
-                  <h3 className="name">Robert Gustavis</h3>
                 </div>
                 <div className="board-members">
                   <img
                     src="images/board/ralph-jackson.jpg"
                     alt="Ralph Jackson"
                   />
-                  <h3 className="name">Ralph Jackson</h3>
                 </div>
                 <div className="board-members">
-                  <img src="images/board/kofi-lomotey.jpg" />
-                  <h3 className="name">Kofi Lomotey</h3>
-                </div>
-                <div className="board-members">
-                  <img src="images/board/dr-humphries.jpeg" />
-                  <h3 className="name">Dr. Frederick Humphries</h3>
+                  <img src="images/board/frederick-humphries.jpg" />
                 </div>
               </div>
               <div className="btn">
@@ -243,45 +363,69 @@ const Home = () => {
             <div className="large-container donate">
               <img src="images/tom-williams.jpg" className="shadow" />
               <div>
-                <h2>Do Your Part & Impact The Youth</h2>
+                <h2>Do Your Part to Help and Impact the Youth</h2>
                 <p>
                   They say the future is written by the young. They’re the ones
                   who will make life changing decisions, facilitate major
                   change, and lead the world into new heights — with the proper
-                  tools and opportunities. Unfortunately, too many boys of color
-                  and those from under-resourced schools still grapple with
-                  issues that prevent them from reaching their personal and
-                  collective potential.{' '}
+                  tools and opportunities. Unfortunately, too many target youth
+                  still grapple with issues that prevent them from reaching
+                  their personal and collective potential.
                 </p>
                 <p>
                   You can be the difference that helps change that for good!
-                  Invest in our boys and give them a fighting chance to lead the
-                  world tomorrow.
+                  Invest in our target youth and give them a fighting chance to
+                  lead the world tomorrow.
                 </p>
-                <div className="btn">
-                  <a
-                    href="https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=K72MD3PXYF8HA"
-                    target="blank"
-                    rel="noreferrer"
-                  >
-                    <Button>Donate and help us today!</Button>
-                  </a>
-                </div>
               </div>
+            </div>
+            <div className="btn">
+              <a href={donate} target="blank" rel="noreferrer">
+                <Button>Donate and help us today!</Button>
+              </a>
             </div>
           </section>
           <section>
-            <div className="container">
-              <h2>Latest News</h2>
-              <p>
-                Where Young Minds Are Empowered to Soar, To Sail, To Step
-                Forward Bravely Into The Unknown, Being Guided More By
-                Imagination Than Memory, And Ultimately To Reach Beyond Their
-                Fears And Failures
-              </p>
-              <div className="btn">
-                <Button>Read More</Button>
+            <div className="large-container">
+              <h2 className="title">Latest News</h2>
+              <div className="all-news">
+                {data.posts.slice(0, 3).map((post) => (
+                  <div key={post.slug}>
+                    <div className="event">
+                      <Link href={`/${post.slug}`} passHref>
+                        <a>
+                          <img
+                            className="news-img"
+                            src={post.coverImage.url}
+                            alt={post.title}
+                            loading="lazy"
+                            title={post.title}
+                          />
+                          <div className="blog-info">
+                            {/* <p>
+                              {new Date(post.date).toLocaleDateString('en-us', {
+                                year: 'numeric',
+                                month: 'short',
+                                day: 'numeric',
+                              })}
+                            </p> */}
+                            <h2>{post.postTitle}</h2>
+                            <p>{post.excerpt}</p>
+                            <p>Read more</p>
+                          </div>
+                        </a>
+                      </Link>
+                    </div>
+                  </div>
+                ))}
               </div>
+            </div>
+            <div className="btn">
+              <Link href="/news">
+                <a>
+                  <Button>Read More News</Button>
+                </a>
+              </Link>
             </div>
           </section>
         </Index>
@@ -293,9 +437,93 @@ const Home = () => {
 export default Home
 
 const Index = styled.div`
+  .flex {
+    display: flex;
+  }
+  .blog-info {
+    padding: 2rem;
+    height: 400px;
+    h2 {
+      font-size: 1.4rem;
+    }
+  }
+
+  .sponsors {
+    max-width: 20rem;
+    height: auto;
+  }
+  .events {
+    @media (min-width: 1440px) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      justify-content: center;
+      align-items: center;
+      grid-gap: 40px;
+    }
+
+    .news,
+    .event {
+      border: 1px solid #eee;
+      border-radius: 20px;
+
+      .news-info,
+      .event-info {
+        padding: 2rem;
+        padding-bottom: 3rem;
+      }
+
+      img {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  .spacex {
+    img {
+      box-shadow: -20px 20px 0;
+      color: #f1c40f;
+    }
+  }
+
+  .box-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    grid-gap: 40px;
+  }
+  .box {
+    max-width: 100%;
+    padding: 2rem;
+    background-color: #2ecc71;
+    margin-bottom: 1rem;
+    color: #fff;
+    box-shadow: 10px 10px 0;
+    color: #27ae60;
+
+    .box-text {
+      color: #fff;
+
+      p {
+        font-size: 1.4rem;
+      }
+    }
+
+    h3 {
+      margin: 0;
+      font-size: 3.5rem;
+    }
+  }
   .shadow {
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    box-shadow: -20px 20px 0;
+    color: #f1c40f;
+  }
+
+  .title {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    margin-bottom: 3rem;
   }
 
   .counsel-sec {
@@ -319,8 +547,8 @@ const Index = styled.div`
     }
     background-image: linear-gradient(
         to bottom,
-        rgba(37, 38, 56, 0.99999),
-        rgba(37, 38, 56, 0.9)
+        rgb(37, 38, 56),
+        rgba(37, 38, 56, 0.37)
       ),
       url('images/boss-counselling.jpg');
     background-position: center;
@@ -367,38 +595,15 @@ const Index = styled.div`
     padding: 4rem 0;
   }
 
-  ${
-    '' /* .dots-bg {
-    background-image: url('images/small-dots.png');
-    position: absolute;
-    right: 40px;
-    bottom: 5px;
-    width: 212px;
-    height: 181px;
-    background-repeat: no-repeat;
-  } */
-  }
-
   /* Team */
   .team-members,
   .board-members {
-    margin-bottom: 4rem;
-    height: 450px;
-    border: 1px solid #ddd;
-    width: 250px;
-    margin: 4rem auto;
-    box-shadow: 0px 15px 30px 0px rgb(0 0 0 / 8%);
-    background-color: #fff;
-
-    h3 {
-      font-size: 1.5rem;
-    }
-
     img {
-      height: 300px;
-      width: 250px;
       margin: 0 auto;
       display: block;
+      border-radius: 10px;
+      box-shadow: -10px 10px 0;
+      color: #ecf0f1;
     }
 
     .name {
@@ -406,57 +611,73 @@ const Index = styled.div`
       text-align: center;
     }
   }
-  .team {
-    @media (min-width: 550px) {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      justify-content: center;
-    }
 
-    @media (min-width: 1270px) {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      justify-content: center;
+  .team-section {
+    p {
+      max-width: 900px;
+      margin: 0 auto;
+      margin-top: 2rem;
+      text-align: center;
     }
   }
+  .team {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
   .board {
-    @media (min-width: 550px) {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      justify-content: center;
-    }
-
-    @media (min-width: 1270px) {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      justify-content: center;
-    }
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
   }
 
   @media (min-width: 1140px) {
-    .intro {
+    .grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       align-items: center;
-      grid-gap: 20px;
+      grid-gap: 40px;
 
       img {
-        box-shadow: 0px 15px 30px 0px rgb(0 0 0 / 8%);
+        border-radius: 10px;
       }
     }
-    .spacex,
     .donate {
       display: flex;
       align-items: center;
 
       img {
         max-width: 40rem;
-        margin-right: 4rem;
+        margin-right: 2rem;
       }
 
       .btn {
         text-align: left;
       }
     }
+  }
+`
+
+const Service = styled.div`
+  border: 2px solid #fff;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  img {
+    width: 100px;
+    margin-bottom: 2rem;
+  }
+  h3 {
+    font-size: 3rem;
+    border-bottom: 10px solid red;
+    padding-bottom: 1rem;
+    width: 30%;
+  }
+
+  p {
+    font-size: 1.4rem;
   }
 `

@@ -134,7 +134,7 @@ const RegisterPage = () => {
                   id="carrerGoals"
                   value={inputs.carrerGoals}
                   onChange={handleOnChange}
-                  placeholder="Carrer Goals"
+                  placeholder="Career Goals"
                 ></textarea>
                 <SubmitButton
                   type="submit"

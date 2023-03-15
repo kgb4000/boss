@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable jsx-a11y/alt-text */
 import React from 'react'
@@ -15,7 +16,7 @@ const Team = () => {
           backgroundImage="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80"
           backgroundHeight="70vh"
           heroText="Team"
-          subText="BOSS Leadership Team."
+          subText="BOSS Leadership Team"
           buttonText="Donate and Help us Today!"
           buttonLink="https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=K72MD3PXYF8HA"
         />
@@ -28,7 +29,11 @@ const Team = () => {
             <TeamMembers>
               <div className="team-member">
                 <div>
-                  <img src="images/team/everett-glenn.jpg" />
+                  <img
+                    src="images/team/everett-glenn.jpg"
+                    alt="Everett L. Glenn​"
+                    loading="lazy"
+                  />
                 </div>
                 <div className="info">
                   <div className="team-member-name-title">
@@ -119,109 +124,134 @@ const Team = () => {
               </div>
               <div className="team-member">
                 <div>
-                  <img src="images/team/justin-glenn.jpg" />
+                  <img
+                    src="images/team/erika-thurmond.jpg"
+                    alt="Erika Thurmond​"
+                    loading="lazy"
+                  />
                 </div>
                 <div className="info">
                   <div className="team-member-name-title">
-                    <h3>Justin Glenn</h3>
-                    <i>Director of Information</i>
+                    <h3>Erika Thurmond​</h3>
+                    <i>Executive Administrator</i>
                   </div>
                   <p>
-                    Justin is responsible for developing information and
-                    resources to keep athletes up to date on eligibility and
-                    other issues that impact their participation in competitive
-                    sports. His other duties include website maintenance and
-                    coordinating social/digital media activities.
+                    Erika is responsible for the success of all internal
+                    operations and developing solutions to program/system
+                    requirements. As the right hand to our CEO, Erika is also
+                    responsible for implementing policies and practices related
+                    to student performance, academic coach enrichment and
+                    overall operations.
                   </p>
                   <p>
-                    A practicing attorney, Justin assisted Everett in the
-                    processing of injury/non-injury grievances; appeals of fines
-                    and suspensions; and disability and injury protection claims
-                    and contract negotiations for a host of NBA and NFL players.
-                  </p>
-                  <p>
-                    Justin is a graduate of Long Beach State University, where
-                    he earned his degree in Sociology, the University of San
-                    Francisco where he earned his law degree, and is a member of
-                    the State Bar of California. Like his dad, Justin went
-                    straight from kindergarten through law school graduation.
+                    A native of Chicago with a BA focused on Communications from
+                    Chicago State University, Erika is an accomplished
+                    professional with extensive experience in sales with a
+                    history of achieving and exceeding revenue goals while
+                    tracking activity in Salesforce. She is highly skilled at
+                    cultivating strong, trusted relationships with key
+                    decision-makers and creating strategic partnerships through
+                    consultative selling. Known for identifying areas for
+                    improvement and implementing solutions which enhance
+                    processes and achieve organizational goals. She is skilled
+                    in media sales, relationship management, account planning
+                    and customer retention.
                   </p>
                 </div>
               </div>
               <div className="team-member">
                 <div>
-                  <img src="images/team/kofi-lomotey.jpg" />
+                  <img
+                    src="images/team/gwendolyn-bush.jpg"
+                    alt="Gwendolyn Bush"
+                    loading="lazy"
+                  />
                 </div>
                 <div className="info">
                   <div className="team-member-name-title">
-                    <h3>Kofi Lomotey</h3>
-                    <i>Chief Education Officer</i>
+                    <h3>Gwendolyn Bush​</h3>
+                    <i>Student Performance Consultant</i>
                   </div>
                   <p>
-                    Kofi Lomotey is a senior fellow with the American
-                    Association of State Colleges and Universities (AASCU).
+                    Gwendolyn Bush is responsible for helping our student
+                    athletes ensure they are college and NCAA eligible before
+                    high school senior year. The process will involve analyzing
+                    their current transcript, tracking, and monitoring their
+                    progress and developing an action plan to keep or put them
+                    on track.
                   </p>
                   <p>
-                    His research interests include urban schools, African
-                    American students in higher education, African American
-                    principals in elementary schools and independent
-                    African-centered schools.
+                    Gwendolyn Bush holds a bachelor’s in Computer Information
+                    Systems and a masters in Educational Leadership and has
+                    worked 27 years in the Broward County school system in a
+                    variety of teaching and administrative positions. Gwen spent
+                    three years as Recruiting Administrator and Player
+                    Development for the University of Michigan’s Director of
+                    Football Operations. She acted as a liaison between the
+                    players, their parents, and the coaches. She was
+                    instrumental in reviewing transcripts, developing academic
+                    plans, and administered a job- shadowing program for
+                    players.
                   </p>
                   <p>
-                    He has published several books, articles in professional
-                    journals and book chapters. He is the editor of the SAGE
-                    Encyclopedia of African American Education, a two-volume
-                    1200-page publication.
+                    Bush successfully navigated her own children to successful
+                    collegiate careers. Her son, Wayne Lyons, played football at
+                    Stanford University and the University of Michigan where he
+                    graduated with a bachelor’s degree in Engineering and a
+                    master’s degree in Social Work respectively. Her daughter,
+                    Danielle Lyons, graduated from University of Florida with a
+                    bachelor’s degree in Recreation and Event Management and
+                    currently serves as the Assistant Director of Football
+                    Operations with Florida Atlantic University Football.
                   </p>
                   <p>
-                    Lomotey is an active member of the American Educational
-                    Research Association (AERA) and serves on the board of
-                    trustees of Oberlin College.
-                  </p>
-                  <p>
-                    He has served as principal investigator on several grants
-                    totaling more than $4 million.
-                  </p>
-                  <p>
-                    From 1992 through 2011, he has served as the editor of the
-                    journal, Urban Education. Lomotey holds PhD and MA degrees
-                    from Stanford University in educational administration and
-                    policy analysis, a Medical degree from Cleveland State
-                    University in curriculum and instruction and a bachelor’s
-                    degree from Oberlin College in economics.
-                  </p>
-                  <p>
-                    He has served as a member of the faculties at Louisiana
-                    State University in Baton Rouge and the State University of
-                    New York in Buffalo and as executive vice president and
-                    provost at Fisk University, senior vice president and
-                    provost at Medgar Evers College (CUNY) and president of Fort
-                    Valley State University.
-                  </p>
-                  <p>
-                    Most recently, he served as chancellor of Southern
-                    University in Baton Rouge. Lomotey is married to A. Nahuja.
-                    They are the parents of three and grandparents of one.
+                    Bush is an active member of Alpha Kappa Alpha Sorority,
+                    Incorporated.
                   </p>
                 </div>
               </div>
               <div className="team-member">
                 <div>
-                  <img src="images/team/skyles-runser.jpg" />
+                  <img
+                    src="images/team/dr-kagba-suaray.jpg"
+                    alt="Dr. Kagba Suaray"
+                    loading="lazy"
+                  />
                 </div>
                 <div className="info">
                   <div className="team-member-name-title">
-                    <h3>Skyles Runser​</h3>
-                    <i>Marketing Volunteer</i>
+                    <h3>Dr. Kagba Suaray</h3>
+                    <i>Math/STEM Initiative Consultant</i>
                   </div>
                   <p>
-                    Former walk-on college athlete. Partner, IIima Partners, a
-                    Silicon Valley based firm that provides marketing strategy
-                    and implementation services for product and company (high
-                    tech and others) launches. Former Director, Hyperion
-                    Solutions, AOL Time Warner, Netscape. B.A. Cum Laude, UCLA;
-                    MBA, Marketing, Marketing Management, Strategy, The Kellogg
-                    School of Management.​
+                    Kagba Suaray is currently in his 17th year as a Professor of
+                    Mathematics and Statistics at California State University,
+                    Long Beach.
+                  </p>
+                  <p>
+                    He serves as Graduate Advisor for one of the largest Applied
+                    Statistics masters programs in the state. He has also served
+                    as the Director of Upward Bound’s Math Science program at
+                    CSULB, and is a product of the McNair scholars’ program
+                    which helped him earn his PhD in mathematics from UC San
+                    Diego at the age of 25, where he was the recipient of the
+                    Eugene Cota Robles Fellowship.
+                  </p>
+                  <p>
+                    As a founding member of The Hesabu Circle, he strives
+                    to empower youth to discover the mathematical greatness that
+                    resides within them because of their Blackness, not in spite
+                    of it.
+                  </p>
+                  <p>
+                    “Hesabu” is the Kiswahili word for “Mathematics.” The group
+                    of Black mathematics faculty and administrative staff at
+                    Southern California campuses who created the Circle did so
+                    to create connections for mutual support to break down
+                    artificial barriers caused by geography, institution, or
+                    academic level and build networks of support that encourage
+                    and empower individuals of African descent to envision and
+                    achieve excellence in mathematics.
                   </p>
                 </div>
               </div>
@@ -256,6 +286,8 @@ const TeamMembers = styled.div`
     margin: 0;
     margin-bottom: 1rem;
     border-radius: 20px;
+    box-shadow: -8px 8px 0;
+    color: #ecf0f1;
   }
 
   .team-member-name-title {

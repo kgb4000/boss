@@ -16,7 +16,7 @@ const AthleteBoard = () => {
           backgroundImage="images/athletic-board/kellogg-and-obama.jpg"
           backgroundHeight="70vh"
           heroText="Athlete Advisory Board"
-          subText="Donate and help us empower our young boys."
+          subText="Donate and help us empower our young boys"
           buttonText="Donate and Help us Today!"
           buttonLink="https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=K72MD3PXYF8HA"
         />
@@ -31,6 +31,7 @@ const AthleteBoard = () => {
                   <img
                     src="images/athletic-board/kellogg-and-obama.jpg"
                     alt="Clark “Special K” Kellogg"
+                    loading="lazy"
                   />
                 </div>
                 <div className="info">
@@ -92,6 +93,7 @@ const AthleteBoard = () => {
                   <img
                     src="images/athletic-board/jameson-evans.png"
                     alt="Clark “Special K” Kellogg"
+                    loading="lazy"
                   />
                 </div>
                 <div className="info">
@@ -106,6 +108,7 @@ const AthleteBoard = () => {
                   <img
                     src="images/athletic-board/dennis-franklin.png"
                     alt="Dennis Franklin"
+                    loading="lazy"
                   />
                 </div>
                 <div className="info">
@@ -123,6 +126,7 @@ const AthleteBoard = () => {
                   <img
                     src="images/athletic-board/willie-gault.png"
                     alt="Willie Gault"
+                    loading="lazy"
                   />
                 </div>
                 <div className="info">
@@ -142,6 +146,7 @@ const AthleteBoard = () => {
                   <img
                     src="images/athletic-board/anthony-hancock.png"
                     alt="Anthony Hancock"
+                    loading="lazy"
                   />
                 </div>
                 <div className="info">
@@ -160,6 +165,7 @@ const AthleteBoard = () => {
                   <img
                     src="images/athletic-board/shawn-stuckey.jpg"
                     alt="Shawn Stuckey"
+                    loading="lazy"
                   />
                 </div>
                 <div className="info">
@@ -175,8 +181,9 @@ const AthleteBoard = () => {
               <div className="board-member">
                 <div>
                   <img
-                    src="images/athletic-board/chandler-jones.png"
+                    src="images/athletic-board/chandler-jones.jpg"
                     alt="Chandler Jones"
+                    loading="lazy"
                   />
                 </div>
                 <div className="info">
@@ -194,6 +201,7 @@ const AthleteBoard = () => {
                   <img
                     src="images/athletic-board/will-poole.jpg"
                     alt="Will Poole"
+                    loading="lazy"
                   />
                 </div>
                 <div className="info">
@@ -239,9 +247,11 @@ const AdvisoryBoardMembers = styled.div`
     
     img {
       width: 200px;
-      border-radius: 20px;
       margin-bottom: 1rem;
-    }
+      border-radius: 20px;
+      box-shadow: -8px 8px 0;
+      color: #ecf0f1;
+      }
   }
 
   .board-member-clark-kellogg {

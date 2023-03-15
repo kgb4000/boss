@@ -39,14 +39,15 @@ const Hero = styled('span')`
   align-items: center;
   background-image: linear-gradient(
       to bottom,
-      rgba(0, 0, 0, 0.6),
-      rgba(0, 0, 0, 0.2)
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.6)
     ),
     url(${(props) => props.backgroundImage});
   background-position: center;
   min-height: ${(props) => props.backgroundHeight};
+  background-position: bottom 40%;
   background-size: cover;
-  margin-top: -100px;
+  ${'' /* margin-top: -100px; */}
   max-width: 100vw;
 
   @media only screen and (min-device-width: 360px) {
@@ -59,7 +60,7 @@ const Hero = styled('span')`
     p {
       font-size: 1.4rem;
       line-height: 1.6;
-      font-weight: 300;
+      font-weight: 400;
     }
   }
 
@@ -70,6 +71,8 @@ const Hero = styled('span')`
     }
 
     p {
+      max-width: 90%;
+      margin: 0 auto;
       font-size: 1.6rem;
       line-height: 1.4;
       letter-spacing: 1px;
@@ -77,7 +80,7 @@ const Hero = styled('span')`
   }
 
   .content {
-    max-width: 90%;
+    width: 80%;
     text-align: center;
     font-weight: 700;
   }

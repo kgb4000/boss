@@ -1,28 +1,17 @@
-import React from 'react'
-import styled from 'styled-components'
+import Link from 'next/link'
 
-const Dropdown = () => {
+const Dropdown = ({ submenus, dropdown }) => {
   return (
-    <>
-      <ul>
-        <DropdownItem textPath="/about" text="About" />
-        <DropdownItem textPath="/about" text="About" />
-        <DropdownItem textPath="/about" text="About" />
-        <DropdownItem textPath="/about" text="About" />
-        <DropdownItem textPath="/about" text="About" />
-      </ul>
-    </>
+    <ul className={`dropdown ${dropdown ? 'show' : ''}`}>
+      {submenus.map((submenu, index) => (
+        <li key={index} className="menu-items">
+          <Link href={submenu.url} passHref>
+            {submenu.title}
+          </Link>
+        </li>
+      ))}
+    </ul>
   )
 }
 
 export default Dropdown
-
-export const DropdownItem = ({ textPath, text }) => {
-  return (
-    <>
-      <li>
-        <a href={textPath}>{text}</a>
-      </li>
-    </>
-  )
-}

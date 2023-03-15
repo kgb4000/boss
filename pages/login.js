@@ -37,7 +37,6 @@ const LoginPage = () => {
     } catch (err) {
       console.error(err)
     }
-    then(() => console.log('Woops!!'))
   }
 
   return (

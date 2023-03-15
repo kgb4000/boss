@@ -38,7 +38,7 @@ const Sibebar = ({ isOpen, toggle }) => {
               </SidebarLink>
             </SidebarItem>
             <SidebarItem>
-              <SidebarLink href="/stem-portal">
+              <SidebarLink href="/stem-college-programs">
                 <SidebarLinkA>Colleges</SidebarLinkA>
               </SidebarLink>
             </SidebarItem>

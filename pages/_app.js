@@ -1,8 +1,10 @@
 import { useState } from 'react'
-import '../styles/globals.scss'
+
 import { AuthContextProvider } from '../components/Context/AuthContext'
 import ProtectedRoutes from '../components/ProtectedRoutes'
 import { useRouter } from 'next/router'
+import 'react-modal-video/scss/modal-video.scss'
+import '../styles/globals.scss'
 
 const noAuthRequired = [
   '/',
@@ -21,6 +23,7 @@ const noAuthRequired = [
   '/register',
   '/privacy-policy',
   '/news',
+  '/[slug]',
 ]
 
 function MyApp({ Component, pageProps }) {

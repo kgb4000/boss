@@ -93,7 +93,11 @@ const BoardOfDirectors = () => {
               </div>
               <div className="board-member">
                 <div className="img">
-                  <img src="images/board/ryan-delaney.jpeg" />
+                  <img
+                    src="images/board/ryan-delaney-1.jpg"
+                    alt="Ryan Delaney"
+                    loading="lazy"
+                  />
                 </div>
                 <div className="info">
                   <div className="board-member-name-title">
@@ -110,7 +114,11 @@ const BoardOfDirectors = () => {
               </div>
               <div className="board-member">
                 <div className="img">
-                  <img src="images/board/ferrara-kate-m.jpeg" />
+                  <img
+                    src="images/board/kate-ferrara.jpg"
+                    alt="Kate Ferrara"
+                    loading="lazy"
+                  />
                 </div>
                 <div className="info">
                   <div className="board-member-name-title">
@@ -204,7 +212,7 @@ const BoardOfDirectors = () => {
                   </p>
                 </div>
               </div>
-              <div className="board-member">
+              {/* <div className="board-member">
                 <div className="img">
                   <img src="images/board/kofi-lomotey.jpg" />
                 </div>
@@ -237,10 +245,10 @@ const BoardOfDirectors = () => {
                     Administration and Analysis, Stanford.
                   </p>
                 </div>
-              </div>
+              </div> */}
               <div className="board-member">
                 <div className="img">
-                  <img src="images/board/dr-humphries.jpeg" />
+                  <img src="images/board/frederick-humphries.jpeg" />
                 </div>
                 <div className="info">
                   <div className="board-member-name-title">
@@ -295,6 +303,8 @@ const BoardMembers = styled.div`
       margin: 0;
       margin-bottom: 1rem;
       border-radius: 20px;
+      box-shadow: -8px 8px 0;
+      color: #ecf0f1;
     }
 
     @media (min-width: 768px) {

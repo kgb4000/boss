@@ -14,7 +14,7 @@ const StemNav = ({ toggle }) => {
   return (
     <Nav>
       <div className="logo">
-        <Link href="/" passHref>
+        <Link href="/stem-portal" passHref>
           <a>BOSS</a>
         </Link>
       </div>
@@ -25,16 +25,21 @@ const StemNav = ({ toggle }) => {
         <ul className="nav">
           <li>
             <Link href="/stem-portal" passHref>
-              <a>Why STEM</a>
+              <a>About STEM Portal</a>
             </Link>
           </li>
           <li>
-            <Link href="/stem-portal" passHref>
-              <a>STEM</a>
+            <Link href="/stem-college-programs" passHref>
+              <a>Student Resources</a>
             </Link>
           </li>
           <li>
-            <Link href="/stem-portal" passHref>
+            <Link href="/stem-college-programs" passHref>
+              <a>Parent Resources</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/stem-college-programs" passHref>
               <a>Colleges</a>
             </Link>
           </li>

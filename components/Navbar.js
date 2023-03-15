@@ -1,3 +1,7 @@
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable @next/next/no-img-element */
+import { menuItems } from '../components/navItems'
+import MenuItems from '../components/MenuItems'
 import Link from 'next/link'
 import { useAuth } from './Context/AuthContext'
 import styled from 'styled-components'
@@ -13,7 +17,9 @@ const Navbar = ({ toggle }) => {
     <Nav>
       <div className="logo">
         <Link href="/" passHref>
-          <a>BOSS</a>
+          <a>
+            <img className="logo" src="/images/boss-color-logo.png" />
+          </a>
         </Link>
       </div>
       <MobileIcon onClick={toggle}>
@@ -21,26 +27,9 @@ const Navbar = ({ toggle }) => {
       </MobileIcon>
       <nav>
         <ul className="nav">
-          <li>
-            <Link href="/about" passHref>
-              <a className="text">About us</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/boss-program" passHref>
-              <a className="text">Our Programs</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/news" passHref>
-              <a className="text">News & Events</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/donate" passHref>
-              <a className="text">Donate</a>
-            </Link>
-          </li>
+          {menuItems.map((menu, index) => {
+            return <MenuItems items={menu} key={index} />
+          })}
           <li>
             {user ? (
               <div>
@@ -118,12 +107,12 @@ const Nav = styled.header`
   height: 100px;
   line-height: 100px;
   z-idex: 1000;
-  background-color: #2c3e50;
+  background-color: #fff;
   padding: 00 1.2rem;
+  border-bottom: 1px solid #eee;
 
   .logo {
-    font-weight: bold;
-    font-size: 2rem;
+    max-width: 10rem;
 
     a {
       color: #fff;
@@ -150,7 +139,7 @@ const Nav = styled.header`
         line-height: 80px;
 
         a.text {
-          color: #fff;
+          color: #000;
           text-decoration: none;
 
           :hover {
